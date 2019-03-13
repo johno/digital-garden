@@ -64,6 +64,20 @@ site
         └── thoughts-2.md
 ```
 
+### Ordering your content
+
+Only the journal feature uses chronological order by default since it's meant
+to be a long running diary of ideas. The posts and wiki categories default
+to alphabetical but allow for you to set a priority. The priority key is used
+to sort. The higher priority number wins.
+
+```
+---
+title: My wiki page
+priority: 9999
+---
+```
+
 ## 🛰 Future
 
 This project is nowhere close to completed. There are numerous
