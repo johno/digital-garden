@@ -8,5 +8,8 @@
   "workspaces": [
     "packages/*",
     "site"
-  ]
+  ],
+  "dependencies": {
+    "lerna": "^3.13.1"
+  }
 }
