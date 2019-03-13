@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-theme-digital-garden",
+  "description": "Build your own digital garden with zero configuration",
+  "version": "0.0.0",
+  "author": "John Otander",
+  "license": "MIT",
+  "main": "index.js",
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "react"
+  ],
+  "devDependencies": {
+    "gatsby": "^2.1.32",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.1.32",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "dependencies": {
+    "gatsby-plugin-meta-redirect": "^1.1.1",
+    "gatsby-plugin-page-creator": "^2.0.10",
+    "gatsby-source-filesystem": "^2.0.25",
+    "gatsby-theme-system": "^0.0.2"
+  }
+}
