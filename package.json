@@ -1,0 +1,8 @@
+{
+  "private": true,
+  "name": "digital-garden",
+  "version": "0.0.0",
+  "scripts": {
+    "publish": "lerna publish"
+  }
+}
