@@ -20,13 +20,10 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
   } = pluginOptions
 
   // TODO: This is wrong, it's missing the directory.
-  const toWikiPath = node => path.join(
-    wikiPath,
-    path.basename(
-      node.parent.relativePath,
-      path.extname(node.parent.relativePath)
-    )
-  )
+  const toWikiPath = node => {
+    const { dir } = path.parse(node.parent.relativePath)
+    return path.join(wikiPath, dir, node.parent.name)
+  }
 
   const result = await graphql(`
     {
