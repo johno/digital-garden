@@ -6,23 +6,18 @@ myself but hope it can be useful for other folks looking to create
 their own gardens that leverage the _open_ web. You can use components
 in your content seamlessly as well which is rad for writing.
 
-Thanks to Gatsby Themes you can install this library and start writing
-and curating content without having to reinvent the wheel.
-
 ## Motivation
 
 I was inspired greatly by [numerous works](#related) that struck a chord.
 At the time of writing this I had roughly 100 WIP blog posts and essays
 that were sitting, hidden in `~nt`.
 
-Content can also be fun again. With MDX we can now write dynamic and
-immersive content that can _show_ rather than _tell_. I've found myself
-writing a lot more, and want to make it easy as hell to share that content
-with the community. A bunch of it is terrible, but about 5% of the time
-I have a good idea, so that makes me happy.
-
-Also, now that I'm currently working full time on Gatsby Themes and MDX
-I should probably dog food it. 🐕
+With a nice digital garden, content can be fun again. With MDX in
+particular we can now write dynamic and immersive content that can _show_
+rather than _tell_. I've found myself writing a lot more, and want to make
+it easy as hell to share that content with the community. With a digital
+garden I can share thoughts with folks without having to copy pasta the
+material to a GitHub Gist.
 
 ## Installation
 
@@ -54,6 +49,7 @@ site
 ├── package.json
 ├── pages
 │   └── index.md
+│   └── contact.md
 ├── posts
 │   └── my-first-post.md
 └── wiki
@@ -83,15 +79,18 @@ priority: 9999
 This project is nowhere close to completed. There are numerous
 things on the horizon like:
 
+- Content ordering
 - Typography theming
 - Layout theming
 - Custom colors
+- Projects section (portfolio)
+- Post archive
 
 ## Built with
 
-- MDX
-- Gatsby
-- Gatsby Theme System
+- [MDX][]
+- [Gatsby][]
+- [gatsby-theme-system][]
 
 ## Related
 
@@ -100,3 +99,9 @@ These following posts served as an inspiration to start this project.
 - https://joelhooks.com/digital-garden
 - https://stackingthebricks.com/how-blogs-broke-the-web/
 - https://tomcritchlow.com/2019/02/17/building-digital-garden/
+
+[mdx]: https://mdxjs.com
+
+[gatsby]: https://gatsbyjs.org
+
+[gatsby-theme-system]: https://gatsby-themes.now.sh
