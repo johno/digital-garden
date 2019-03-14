@@ -19,7 +19,6 @@ share that content with the community. With a digital garden I can share
 thoughts with folks without having to copy pasta the material to a GitHub
 Gist.
 
-
 ## Installation
 
 Install the libraries that are needed:

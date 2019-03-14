@@ -8,7 +8,7 @@ import useSiteMetadata from '../use-site-metadata'
 import { Box } from '../components/ui'
 
 export default props => {
-  const { title, social } = useSiteMetadata()
+  const { title } = useSiteMetadata()
 
   return (
     <ThemeProvider theme={theme}>

@@ -8,6 +8,7 @@ const debug = Debug(`gatsby-theme-digital-garden`)
 const Post = require.resolve('./src/templates/post')
 const Posts = require.resolve('./src/templates/posts')
 const Wiki = require.resolve('./src/templates/wiki')
+const Wikis = require.resolve('./src/templates/wikis')
 
 exports.createPages = async ({ graphql, actions }, pluginOptions) => {
   const { createPage, createRedirect } = actions
@@ -17,6 +18,15 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     postsPerPage = 9999,
     wikiPath = '/wiki'
   } = pluginOptions
+
+  // TODO: This is wrong, it's missing the directory.
+  const toWikiPath = node => path.join(
+    wikiPath,
+    path.basename(
+      node.parent.relativePath,
+      path.extname(node.parent.relativePath)
+    )
+  )
 
   const result = await graphql(`
     {
@@ -74,16 +84,8 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     }
 
     if (node.parent.sourceInstanceName === 'wiki') {
-      const fullPath = path.join(
-        wikiPath,
-        path.basename(
-          node.parent.relativePath,
-          path.extname(node.parent.relativePath)
-        )
-      )
-
       return createPage({
-        path: fullPath,
+        path: toWikiPath(node),
         context: node,
         component: Wiki,
       })
@@ -94,6 +96,16 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
       context: node,
       component: Post,
     })
+  })
+
+  const wikis = mdxPages.edges
+    .filter(({ node }) => node.parent.sourceInstanceName === 'wiki')
+    .map(({ node }) => toWikiPath(node))
+
+  createPage({
+    path: wikiPath,
+    context: { urls: wikis },
+    component: Wikis
   })
 
   // Create post list pages
