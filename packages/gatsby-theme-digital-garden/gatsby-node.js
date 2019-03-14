@@ -81,9 +81,11 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     if (node.parent.sourceInstanceName === 'notes') {
       return createPage({
         path: toNotesPath(node),
-        context: node,
-        component: Note,
-        title: node.frontmatter.title
+        context: {
+          ...node,
+          title: node.frontmatter.title
+        },
+        component: Note
       })
     }
 

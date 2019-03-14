@@ -1,9 +1,9 @@
 import React from 'react'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
-const WikiPage = ({ data: { mdx } }) => (
+const WikiPage = ({ note: { code } }) => (
   <>
-    <MDXRenderer>{mdx.code.body}</MDXRenderer>
+    <MDXRenderer>{code.body}</MDXRenderer>
   </>
 )
 

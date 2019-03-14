@@ -24,7 +24,8 @@ module.exports = _config => {
           path: path.join(process.cwd(), `pages`)
         }
       },
-      `gatsby-plugin-meta-redirect`
+      `gatsby-plugin-meta-redirect`,
+      'gatsby-plugin-og-image'
     ]
   }
 }
