@@ -82,7 +82,8 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
       return createPage({
         path: toNotesPath(node),
         context: node,
-        component: Note
+        component: Note,
+        title: node.frontmatter.title
       })
     }
 
