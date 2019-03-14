@@ -8,11 +8,11 @@ export default {
     link: blue,
     pre: {
       text: 'rebeccapurple',
-      background: '#f6f3f9',
+      background: '#f6f3f9'
     },
     code: {
       text: 'rebeccapurple',
-      background: '#f6f3f9',
-    },
-  },
+      background: '#f6f3f9'
+    }
+  }
 }

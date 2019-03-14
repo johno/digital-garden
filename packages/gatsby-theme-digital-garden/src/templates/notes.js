@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import isPresent from "is-present"
+import React from 'react'
+import { Link } from 'gatsby'
+import isPresent from 'is-present'
 import { Folder } from 'react-feather'
 
 import { Box } from '../components/ui'
@@ -33,7 +33,11 @@ export default ({ pathContext: { groupedNotes, urls } }) => (
     )}
     <h3>List</h3>
     <ul>
-      {urls.map(url => <li key={url}><Link to={url}>{url}</Link></li>)}
+      {urls.map(url => (
+        <li key={url}>
+          <Link to={url}>{url}</Link>
+        </li>
+      ))}
     </ul>
   </>
 )

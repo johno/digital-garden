@@ -1,9 +1,13 @@
-import React from "react"
-import { graphql } from "gatsby"
+import React from 'react'
+import { graphql } from 'gatsby'
 
 import Posts from '../components/posts'
 
-export default ({ data: { allMdx: { edges } } }) => {
+export default ({
+  data: {
+    allMdx: { edges }
+  }
+}) => {
   const posts = edges
     .filter(({ node }) => node.parent.sourceInstanceName === 'posts')
     .map(edge => edge.node)

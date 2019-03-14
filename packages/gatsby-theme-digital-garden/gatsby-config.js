@@ -2,23 +2,21 @@ const path = require('path')
 
 module.exports = _config => {
   return {
-    __experimentalThemes: [
-      'gatsby-theme-system'
-    ],
+    __experimentalThemes: ['gatsby-theme-system'],
     plugins: [
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           path: `posts`,
-          name: `posts`,
-        },
+          name: `posts`
+        }
       },
       {
         resolve: `gatsby-source-filesystem`,
         options: {
           path: `notes`,
-          name: `notes`,
-        },
+          name: `notes`
+        }
       },
       {
         resolve: `gatsby-plugin-page-creator`,

@@ -13,10 +13,7 @@ const Notes = require.resolve('./src/templates/notes')
 exports.createPages = async ({ graphql, actions }, pluginOptions) => {
   const { createPage, createRedirect } = actions
 
-  const {
-    postsPath = `/posts`,
-    notesPath = '/notes'
-  } = pluginOptions
+  const { postsPath = `/posts`, notesPath = '/notes' } = pluginOptions
 
   const toNotesPath = node => {
     const { dir } = path.parse(node.parent.relativePath)
@@ -66,14 +63,17 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     }`
     const pagePath = node.frontmatter.path || fallbackPath
 
-    if (node.frontmatter.redirects && node.parent.sourceInstanceName === 'posts') {
+    if (
+      node.frontmatter.redirects &&
+      node.parent.sourceInstanceName === 'posts'
+    ) {
       // TODO: Handle notes redirects as well
       node.frontmatter.redirects.forEach(fromPath => {
         createRedirect({
           fromPath,
           toPath: pagePath,
           redirectInBrowser: true,
-          isPermanent: true,
+          isPermanent: true
         })
       })
     }
@@ -82,19 +82,20 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
       return createPage({
         path: toNotesPath(node),
         context: node,
-        component: Note,
+        component: Note
       })
     }
 
     createPage({
       path: pagePath,
       context: node,
-      component: Post,
+      component: Post
     })
   })
 
-  const notes = mdxPages.edges
-    .filter(({ node }) => node.parent.sourceInstanceName === 'notes')
+  const notes = mdxPages.edges.filter(
+    ({ node }) => node.parent.sourceInstanceName === 'notes'
+  )
 
   const notesUrls = notes.map(({ node }) => toNotesPath(node))
 
@@ -146,7 +147,7 @@ exports.onPreBootstrap = ({ store }) => {
   const dirs = [
     path.join(program.directory, `posts`),
     path.join(program.directory, `pages`),
-    path.join(program.directory, `notes`),
+    path.join(program.directory, `notes`)
   ]
 
   dirs.forEach(dir => {
@@ -164,9 +165,9 @@ exports.onCreateWebpackConfig = ({ loaders, actions }) => {
         {
           test: /\.js$/,
           include: path.dirname(require.resolve(`gatsby-theme-digital-garden`)),
-          use: [loaders.js()],
-        },
-      ],
-    },
+          use: [loaders.js()]
+        }
+      ]
+    }
   })
 }
