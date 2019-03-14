@@ -1,6 +1,6 @@
 import { graphql } from 'gatsby'
 
-import Post from '../components/Post'
+import Post from '../components/post'
 
 export default Post
 
