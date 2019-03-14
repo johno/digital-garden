@@ -15,7 +15,6 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
 
   const {
     postsPath = `/posts`,
-    postsPerPage = 9999,
     notesPath = '/notes'
   } = pluginOptions
 
@@ -135,35 +134,9 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     component: Notes
   })
 
-  // Create post list pages
-  const posts = mdxPages.edges
-  const numPages = Math.ceil(posts.length / postsPerPage)
-  Array.from({ length: numPages }).forEach((_, i) => {
-    const limit = postsPerPage
-    const skip = i * postsPerPage
-    const currentPage = i + 1
-
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-
-    const nextPage = isLast ? null : `${postsPath}/${currentPage + 1}`
-    const prevPage = isFirst
-      ? null
-      : `${postsPath}/${currentPage - 1 === 1 ? `` : currentPage - 1}`
-
-    createPage({
-      path: isFirst ? postsPath : `${postsPath}/${currentPage}`,
-      component: Posts,
-      context: {
-        limit,
-        skip,
-        currentPage,
-        isFirst,
-        isLast,
-        nextPage,
-        prevPage,
-      },
-    })
+  createPage({
+    path: postsPath,
+    component: Posts
   })
 }
 
@@ -173,7 +146,7 @@ exports.onPreBootstrap = ({ store }) => {
   const dirs = [
     path.join(program.directory, `posts`),
     path.join(program.directory, `pages`),
-    path.join(program.directory, `wiki`),
+    path.join(program.directory, `notes`),
   ]
 
   dirs.forEach(dir => {
