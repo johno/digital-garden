@@ -101,6 +101,11 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
 
   const groupedNotes = notes.reduce((acc, { node }) => {
     const { dir } = path.parse(node.parent.relativePath)
+
+    if (!dir) {
+      return acc
+    }
+
     acc[dir] = acc[dir] || []
     acc[dir].push({
       pagePath: path.join(notesPath, dir),
