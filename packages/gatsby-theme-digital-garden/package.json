@@ -22,6 +22,7 @@
   },
   "dependencies": {
     "gatsby-plugin-meta-redirect": "^1.1.1",
+    "gatsby-plugin-og-image": "0.0.1",
     "gatsby-plugin-page-creator": "^2.0.10",
     "gatsby-source-filesystem": "^2.0.25",
     "gatsby-theme-system": "^0.0.2",
