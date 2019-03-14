@@ -71,7 +71,7 @@ to be a long running diary of ideas. The posts and wiki categories default
 to alphabetical but allow for you to set a priority. The priority key is used
 to sort. The higher priority number wins.
 
-```
+```txt
 ---
 title: My wiki page
 priority: 9999

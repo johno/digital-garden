@@ -1,7 +1,6 @@
 const fs = require(`fs`)
 const path = require(`path`)
 const mkdirp = require(`mkdirp`)
-const kebab = require(`lodash.kebabcase`)
 const Debug = require(`debug`)
 
 const debug = Debug(`gatsby-theme-digital-garden`)
@@ -32,6 +31,8 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
             parent {
               ... on File {
                 name
+                base
+                relativePath
                 sourceInstanceName
               }
             }
@@ -62,13 +63,14 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     const fallbackPath = `/${node.parent.sourceInstanceName}/${
       node.parent.name
     }`
-    const path = node.frontmatter.path || fallbackPath
+    const pagePath = node.frontmatter.path || fallbackPath
 
-    if (node.frontmatter.redirects) {
+    if (node.frontmatter.redirects && node.parent.sourceInstanceName === 'posts') {
+      // TODO: Handle wiki redirects as well
       node.frontmatter.redirects.forEach(fromPath => {
         createRedirect({
           fromPath,
-          toPath: path,
+          toPath: pagePath,
           redirectInBrowser: true,
           isPermanent: true,
         })
@@ -76,15 +78,23 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     }
 
     if (node.parent.sourceInstanceName === 'wiki') {
+      const fullPath = path.join(
+        '/wiki',
+        path.basename(
+          node.parent.relativePath,
+          path.extname(node.parent.relativePath)
+        )
+      )
+
       return createPage({
-        path,
+        path: fullPath,
         context: node,
         component: Wiki,
       })
     }
 
     createPage({
-      path,
+      path: pagePath,
       context: node,
       component: Post,
     })
