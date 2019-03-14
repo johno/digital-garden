@@ -1,4 +1,4 @@
-# 🌻 Digital Garden
+# 🌻 [WIP] Digital Garden
 
 Digital Garden is a content-first project meant to make it easier to
 write and curate content on the web. This is a project I've built for
@@ -8,11 +8,11 @@ in your content seamlessly as well which is rad for writing.
 
 ## Motivation
 
-I was inspired greatly by [numerous works](#related) that struck a chord.
+I was inspired by [numerous posts](#related) that struck a chord.
 At the time of writing this I had roughly 100 WIP blog posts and essays
-that were sitting, hidden in `~nt`.
+that were sitting, hidden in a local directory: `~nt`.
 
-With a nice digital garden, content can be fun again. With MDX in
+With a nice digital garden, content can be fun again. With[MDX][] in
 particular we can now write dynamic and immersive content that can _show_
 rather than _tell_. I've found myself writing a lot more, and want to make
 it easy as hell to share that content with the community. With a digital
