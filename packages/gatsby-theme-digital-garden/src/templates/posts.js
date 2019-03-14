@@ -1,7 +1,15 @@
 import React from "react"
 import { graphql } from "gatsby"
 
-export default props => <pre>{JSON.stringify(props, null, 2)}</pre>
+import Posts from '../components/posts'
+
+export default ({ data: { allMdx: { edges } } }) => {
+  const posts = edges
+    .filter(({ node }) => node.parent.sourceInstanceName === 'posts')
+    .map(edge => edge.node)
+
+  return <Posts posts={posts} />
+}
 
 export const pageQuery = graphql`
   query PostList($limit: Int, $skip: Int) {
@@ -23,7 +31,6 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
-            date(formatString: "MMMM DD, YYYY")
           }
         }
       }

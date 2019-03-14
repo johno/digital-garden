@@ -27,7 +27,6 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
         edges {
           node {
             id
-            excerpt
             parent {
               ... on File {
                 name
@@ -41,9 +40,6 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
               title
               redirects
               date(formatString: "MMMM DD, YYYY")
-            }
-            code {
-              scope
             }
           }
         }
@@ -79,7 +75,7 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
 
     if (node.parent.sourceInstanceName === 'wiki') {
       const fullPath = path.join(
-        '/wiki',
+        wikiPath,
         path.basename(
           node.parent.relativePath,
           path.extname(node.parent.relativePath)
