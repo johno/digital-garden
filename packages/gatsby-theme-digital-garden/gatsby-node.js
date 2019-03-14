@@ -94,13 +94,39 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     })
   })
 
-  const notesUrls = mdxPages.edges
+  const notes = mdxPages.edges
     .filter(({ node }) => node.parent.sourceInstanceName === 'notes')
-    .map(({ node }) => toNotesPath(node))
+
+  const notesUrls = notes.map(({ node }) => toNotesPath(node))
+
+  const groupedNotes = notes.reduce((acc, { node }) => {
+    const { dir } = path.parse(node.parent.relativePath)
+    acc[dir] = acc[dir] || []
+    acc[dir].push({
+      pagePath: path.join(notesPath, dir),
+      url: toNotesPath(node),
+      ...node
+    })
+
+    return acc
+  }, {})
+
+  Object.entries(groupedNotes).map(([key, value]) => {
+    createPage({
+      path: path.join(notesPath, key),
+      context: {
+        urls: value.map(v => v.url)
+      },
+      component: Notes
+    })
+  })
 
   createPage({
     path: notesPath,
-    context: { urls: notesUrls },
+    context: {
+      urls: notesUrls,
+      groupedNotes
+    },
     component: Notes
   })
 
