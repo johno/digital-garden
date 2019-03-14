@@ -25,7 +25,8 @@
     "gatsby-plugin-page-creator": "^2.0.10",
     "gatsby-source-filesystem": "^2.0.25",
     "gatsby-theme-system": "^0.0.2",
-    "is-present": "^1.0.0"
+    "is-present": "^1.0.0",
+    "react-feather": "^1.1.6"
   },
   "gitHead": "b57bef4bf325ed0008dfa49e7f7ef204bed97194"
 }
