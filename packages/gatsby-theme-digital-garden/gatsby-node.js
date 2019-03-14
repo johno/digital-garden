@@ -7,8 +7,8 @@ const debug = Debug(`gatsby-theme-digital-garden`)
 
 const Post = require.resolve('./src/templates/post')
 const Posts = require.resolve('./src/templates/posts')
-const Wiki = require.resolve('./src/templates/wiki')
-const Wikis = require.resolve('./src/templates/wikis')
+const Note = require.resolve('./src/templates/note')
+const Notes = require.resolve('./src/templates/notes')
 
 exports.createPages = async ({ graphql, actions }, pluginOptions) => {
   const { createPage, createRedirect } = actions
@@ -16,13 +16,12 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
   const {
     postsPath = `/posts`,
     postsPerPage = 9999,
-    wikiPath = '/wiki'
+    notesPath = '/notes'
   } = pluginOptions
 
-  // TODO: This is wrong, it's missing the directory.
-  const toWikiPath = node => {
+  const toNotesPath = node => {
     const { dir } = path.parse(node.parent.relativePath)
-    return path.join(wikiPath, dir, node.parent.name)
+    return path.join(notesPath, dir, node.parent.name)
   }
 
   const result = await graphql(`
@@ -69,7 +68,7 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     const pagePath = node.frontmatter.path || fallbackPath
 
     if (node.frontmatter.redirects && node.parent.sourceInstanceName === 'posts') {
-      // TODO: Handle wiki redirects as well
+      // TODO: Handle notes redirects as well
       node.frontmatter.redirects.forEach(fromPath => {
         createRedirect({
           fromPath,
@@ -80,11 +79,11 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
       })
     }
 
-    if (node.parent.sourceInstanceName === 'wiki') {
+    if (node.parent.sourceInstanceName === 'notes') {
       return createPage({
-        path: toWikiPath(node),
+        path: toNotesPath(node),
         context: node,
-        component: Wiki,
+        component: Note,
       })
     }
 
@@ -95,14 +94,14 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
     })
   })
 
-  const wikis = mdxPages.edges
-    .filter(({ node }) => node.parent.sourceInstanceName === 'wiki')
-    .map(({ node }) => toWikiPath(node))
+  const notesUrls = mdxPages.edges
+    .filter(({ node }) => node.parent.sourceInstanceName === 'notes')
+    .map(({ node }) => toNotesPath(node))
 
   createPage({
-    path: wikiPath,
-    context: { urls: wikis },
-    component: Wikis
+    path: notesPath,
+    context: { urls: notesUrls },
+    component: Notes
   })
 
   // Create post list pages

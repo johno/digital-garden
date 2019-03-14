@@ -4,7 +4,7 @@ module.exports = {
       resolve: 'gatsby-theme-digital-garden',
       options: {
         postsPath: '/writing',
-        wikiPath: '/txt'
+        notesPath: '/txt'
       }
     }
   ],

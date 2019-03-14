@@ -16,8 +16,8 @@ module.exports = _config => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          path: `wiki`,
-          name: `wiki`,
+          path: `notes`,
+          name: `notes`,
         },
       },
       {

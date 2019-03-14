@@ -1,8 +1,8 @@
 import { graphql } from 'gatsby'
 
-import Wiki from '../components/wiki'
+import Note from '../components/note'
 
-export default Wiki
+export default Note
 
 export const pageQuery = graphql`
   query($id: String!) {
