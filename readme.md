@@ -62,6 +62,8 @@ site
 
 ### Ordering your content
 
+__:warning: Not yet implemented__
+
 Only the journal feature uses chronological order by default since it's meant
 to be a long running diary of ideas. The posts and wiki categories default
 to alphabetical but allow for you to set a priority. The priority key is used
@@ -80,6 +82,7 @@ This project is nowhere close to completed. There are numerous
 things on the horizon like:
 
 - Content ordering
+- Wiki index page
 - Typography theming
 - Layout theming
 - Custom colors
