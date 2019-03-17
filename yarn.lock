@@ -5816,6 +5816,13 @@ gatsby-plugin-react-helmet@^3.0.8:
   dependencies:
     "@babel/runtime" "^7.0.0"
 
+gatsby-plugin-redirects@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-redirects/-/gatsby-plugin-redirects-1.0.0.tgz#c8d1d944245d6a9de92df9480bff5a2922823a19"
+  integrity sha512-FB3pIqAfE4sD86DKndHuildhJaNJllzu2n1yJYjRpSImv8Ln1f7JH/HWoxYbNMj1n/r+Ktu8zh0TsulyaqvyOg==
+  dependencies:
+    gatsby-plugin-meta-redirect "^1.1.1"
+
 gatsby-react-router-scroll@^2.0.5:
   version "2.0.5"
   resolved "https://registry.yarnpkg.com/gatsby-react-router-scroll/-/gatsby-react-router-scroll-2.0.5.tgz#a6956796f430d539de658c90bdeb0d1423587cd3"
@@ -5845,18 +5852,6 @@ gatsby-source-filesystem@^2.0.25:
     slash "^1.0.0"
     valid-url "^1.0.9"
     xstate "^3.1.0"
-
-gatsby-theme-digital-garden@*:
-  version "0.0.1-alpha.9"
-  dependencies:
-    gatsby-plugin-meta-redirect "^1.1.1"
-    gatsby-plugin-og-image "0.0.1"
-    gatsby-plugin-page-creator "^2.0.10"
-    gatsby-source-filesystem "^2.0.25"
-    gatsby-theme-system "^0.0.2"
-    is-present "^1.0.0"
-    mdx-blocks "^0.0.3"
-    react-feather "^1.1.6"
 
 gatsby-theme-system@^0.0.2:
   version "0.0.2"

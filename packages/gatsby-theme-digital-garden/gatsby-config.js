@@ -1,7 +1,7 @@
 const path = require('path')
 
 module.exports = _config => {
-  const plugins = [];
+  const plugins = []
 
   _config.posts !== false &&
     plugins.push({
@@ -10,7 +10,7 @@ module.exports = _config => {
         path: _config.posts || `posts`,
         name: `posts`
       }
-    });
+    })
 
   return {
     __experimentalThemes: ['gatsby-theme-system'],
@@ -29,7 +29,7 @@ module.exports = _config => {
           path: path.join(process.cwd(), `pages`)
         }
       },
-      `gatsby-plugin-meta-redirect`,
+      'gatsby-plugin-redirects',
       'gatsby-plugin-og-image'
     ]
   }
