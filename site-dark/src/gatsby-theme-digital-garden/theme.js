@@ -3,12 +3,12 @@ const blue = '#3c58e8'
 export default {
   colors: {
     blue,
-    text: '#000',
-    background: '#fff',
+    text: '#fafafa',
+    background: '#000',
     link: blue,
     primary: blue,
-    secondary: '#444',
-    muted: '#888',
+    secondary: 'green',
+    muted: '#ccc',
     highlight: 'tomato',
     pre: {
       text: 'rebeccapurple',

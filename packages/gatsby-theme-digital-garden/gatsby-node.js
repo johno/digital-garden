@@ -9,7 +9,7 @@ const Note = require.resolve('./src/templates/note')
 const Notes = require.resolve('./src/templates/notes')
 
 exports.createPages = async ({ graphql, actions }, pluginOptions) => {
-  const { createPage, createRedirect } = actions
+  const { createPage } = actions
 
   const { notesPath = '/notes' } = pluginOptions
 
@@ -20,10 +20,7 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
 
   const result = await graphql(`
     {
-      mdxPages: allMdx(
-        sort: { fields: [frontmatter___date], order: DESC }
-        filter: { frontmatter: { draft: { ne: true }, archived: { ne: true } } }
-      ) {
+      mdxPages: allMdx {
         edges {
           node {
             id
@@ -35,12 +32,6 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
                 sourceInstanceName
               }
             }
-            frontmatter {
-              path
-              title
-              redirects
-              date(formatString: "MMMM DD, YYYY")
-            }
           }
         }
       }
@@ -49,33 +40,25 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
 
   if (result.errors) {
     console.log(result.errors)
-    throw new Error(`Could not query articles`, result.errors)
+    throw new Error(`Could not query notes`, result.errors)
   }
 
   const { mdxPages } = result.data
-
-  // Create pages and redirects
-  mdxPages.edges.forEach(({ node }) => {
-    const fallbackPath = `/${node.parent.sourceInstanceName}/${
-      node.parent.name
-    }`
-    const pagePath = node.frontmatter.path || fallbackPath
-
-    if (node.parent.sourceInstanceName === 'notes') {
-      return createPage({
-        path: toNotesPath(node),
-        context: {
-          ...node,
-          title: node.frontmatter.title || node.parent.name
-        },
-        component: Note
-      })
-    }
-  })
-
   const notes = mdxPages.edges.filter(
     ({ node }) => node.parent.sourceInstanceName === 'notes'
   )
+
+  // Create notes pages
+  notes.forEach(({ node }) => {
+    createPage({
+      path: toNotesPath(node),
+      context: {
+        ...node,
+        title: node.parent.name
+      },
+      component: Note
+    })
+  })
 
   const notesUrls = notes.map(({ node }) => toNotesPath(node))
 

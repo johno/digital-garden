@@ -1,0 +1,15 @@
+{
+  "private": true,
+  "name": "site-dark",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "gatsby develop",
+    "build": "gatsby build"
+  },
+  "dependencies": {
+    "gatsby": "^2.1.32",
+    "gatsby-theme-digital-garden": "*",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  }
+}

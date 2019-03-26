@@ -1,6 +1,6 @@
 const path = require('path')
 
-module.exports = _config => {
+module.exports = config => {
   const plugins = []
 
   return {
@@ -10,7 +10,7 @@ module.exports = _config => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          path: _config.notes || `notes`,
+          path: config.notes || `notes`,
           name: `notes`
         }
       },
