@@ -3,8 +3,13 @@ module.exports = {
     {
       resolve: 'gatsby-theme-digital-garden',
       options: {
-        postsPath: '/writing',
         notesPath: '/txt'
+      }
+    },
+    {
+      resolve: 'gatsby-theme-digital-garden-blog',
+      options: {
+        postsPath: '/writing'
       }
     }
   ],
