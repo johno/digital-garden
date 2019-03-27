@@ -1,12 +1,24 @@
 const path = require('path')
 
-module.exports = config => {
-  const plugins = []
+module.exports = options => {
+  const { mdx = true, mdxLayouts = {} } = options
 
   return {
-    __experimentalThemes: ['gatsby-theme-system'],
+    __experimentalThemes: [
+      {
+        resolve: 'gatsby-theme-system',
+        options: {
+          mdx: false
+        }
+      }
+    ],
     plugins: [
-      ...plugins,
+      mdx && {
+        resolve: 'gatsby-mdx',
+        options: {
+          defaultLayouts: mdxLayouts
+        }
+      },
       {
         resolve: `gatsby-source-filesystem`,
         options: {

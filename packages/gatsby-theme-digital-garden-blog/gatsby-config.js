@@ -4,7 +4,14 @@ module.exports = config => {
   const plugins = []
 
   return {
-    __experimentalThemes: [`gatsby-theme-system`],
+    __experimentalThemes: [
+      {
+        resolve: `gatsby-theme-system`,
+        options: {
+          mdx: false
+        }
+      }
+    ],
     plugins: [
       ...plugins,
       {
