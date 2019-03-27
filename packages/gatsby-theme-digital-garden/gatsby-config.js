@@ -16,6 +16,7 @@ module.exports = options => {
       mdx && {
         resolve: 'gatsby-mdx',
         options: {
+          extensions: [`.md`, `.mdx`],
           defaultLayouts: mdxLayouts
         }
       },
