@@ -22,7 +22,7 @@ module.exports = options => {
       {
         resolve: `gatsby-source-filesystem`,
         options: {
-          path: config.notes || `notes`,
+          path: options.notes || `notes`,
           name: `notes`
         }
       },
