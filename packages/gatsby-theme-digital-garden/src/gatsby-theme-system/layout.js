@@ -12,8 +12,8 @@ export default props => (
     <Typography />
     <Layout>
       <Header />
-      <Main>
-        <Box maxWidth={1024} mt={[3, 4, 5]} mx="auto">
+      <Main mx={3}>
+        <Box maxWidth={1024} my={[3, 4, 5]} mx="auto">
           {props.children}
         </Box>
       </Main>
