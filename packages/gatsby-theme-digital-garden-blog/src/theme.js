@@ -12,7 +12,8 @@ export default {
     highlight: 'tomato',
     pre: {
       text: 'rebeccapurple',
-      background: '#f6f3f9'
+      background: '#f6f3f9',
+      overflowX: 'scroll'
     },
     code: {
       text: 'rebeccapurple',
