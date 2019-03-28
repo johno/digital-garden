@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Header } from 'gatsby-theme-system'
 
-import { Box } from '../../compponents/ui'
+import { Box } from '../../components/ui'
 import useSiteMetadata from '../../use-site-metadata'
 
 export default () => {
