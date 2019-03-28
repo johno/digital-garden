@@ -13,7 +13,7 @@ export default props => (
     <Layout>
       <Header />
       <Main>
-        <Box maxWidth={1024} mt={[3, 4, 5]} mx="auto">
+        <Box maxWidth={1024} my={[3, 4, 5]} mx="auto" padding={3}>
           {props.children}
         </Box>
       </Main>
