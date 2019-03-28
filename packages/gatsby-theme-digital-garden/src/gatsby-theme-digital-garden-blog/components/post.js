@@ -1,8 +1,8 @@
 import React from 'react'
 import MDXRenderer from 'gatsby-mdx/mdx-renderer'
 
-import Layout from './layout'
-import { Heading } from './ui'
+import Layout from '../../components/layout'
+import { Heading } from '../../components/ui'
 
 const Post = ({
   data: {
