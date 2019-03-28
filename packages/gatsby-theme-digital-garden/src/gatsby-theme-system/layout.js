@@ -12,9 +12,11 @@ export default props => (
     <Typography />
     <Layout>
       <Header />
-      <Main mx={3}>
-        <Box maxWidth={1024} my={[3, 4, 5]} mx="auto">
-          {props.children}
+      <Main>
+        <Box maxWidth={1024} mx="auto">
+          <Box is="main" m={[3, 4, 5]}>
+            {props.children}
+          </Box>
         </Box>
       </Main>
     </Layout>
