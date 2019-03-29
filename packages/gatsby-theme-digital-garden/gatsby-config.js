@@ -35,6 +35,6 @@ module.exports = options => {
       },
       'gatsby-plugin-redirects',
       'gatsby-plugin-og-image'
-    ]
+    ].filter(Boolean)
   }
 }
