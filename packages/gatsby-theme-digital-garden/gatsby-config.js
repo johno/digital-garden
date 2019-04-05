@@ -10,7 +10,10 @@ module.exports = options => {
         resolve: 'gatsby-mdx',
         options: {
           extensions: [`.md`, `.mdx`],
-          defaultLayouts: mdxLayouts
+          defaultLayouts: {
+            default: require.resolve('./src/components/layout'),
+            ...mdxLayouts
+          }
         }
       },
       {
