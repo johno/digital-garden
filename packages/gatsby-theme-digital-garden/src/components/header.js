@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Header } from 'gatsby-theme-system'
+// import { Header } from 'gatsby-theme-system'
 
 import { Box } from './ui'
 import useSiteMetadata from '../use-site-metadata'
+
+const Header = props => <header {...props} />
 
 export default () => {
   const { title } = useSiteMetadata()

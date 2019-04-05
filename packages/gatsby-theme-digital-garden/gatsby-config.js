@@ -4,14 +4,7 @@ module.exports = options => {
   const { mdx = true, mdxLayouts = {} } = options
 
   return {
-    __experimentalThemes: [
-      {
-        resolve: 'gatsby-theme-system',
-        options: {
-          mdx: false
-        }
-      }
-    ],
+    __experimentalThemes: [],
     plugins: [
       mdx && {
         resolve: 'gatsby-mdx',
