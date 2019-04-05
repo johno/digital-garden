@@ -20,17 +20,17 @@ export default () => {
         {title}
       </Box>
       <Box mx="auto" />
-      <Box as={Link} to="/writing">
+      <Styled.a as={Link} to="/writing">
         Writing
-      </Box>
+      </Styled.a>
       <Box mx={1} />
-      <Box as={Link} to="/txt" color="inherit">
+      <Styled.a as={Link} to="/txt">
         Notes
-      </Box>
+      </Styled.a>
       <Box mx={1} />
-      <Box as={Link} to="/contact" color="inherit">
+      <Styled.a as={Link} to="/contact">
         Contact
-      </Box>
+      </Styled.a>
     </Header>
   )
 }

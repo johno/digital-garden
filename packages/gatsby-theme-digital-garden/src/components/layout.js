@@ -5,7 +5,7 @@ import { Layout, Main, Container } from 'theme-ui/layout'
 import Header from './header'
 
 export default props => (
-  <ThemeProvider>
+  <>
     <Global
       styles={css({
         '*': {
@@ -24,5 +24,5 @@ export default props => (
         <Container>{props.children}</Container>
       </Main>
     </Layout>
-  </ThemeProvider>
+  </>
 )

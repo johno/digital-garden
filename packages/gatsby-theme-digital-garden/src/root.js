@@ -1,16 +1,9 @@
 import React from 'react'
-import { Context } from 'theme-ui'
+import { ThemeProvider } from 'theme-ui'
 import theme from './theme'
 
 const Root = props => (
-  <Context.Provider
-    value={{
-      theme,
-      components: {}
-    }}
-  >
-    {props.children}
-  </Context.Provider>
+  <ThemeProvider theme={theme}>{props.children}</ThemeProvider>
 )
 
 export const wrapRootElement = ({ element, props }) => (
