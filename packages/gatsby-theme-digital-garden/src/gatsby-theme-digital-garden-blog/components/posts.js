@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Styled } from 'theme-ui'
 
 import Layout from '../../components/layout'
 
@@ -8,7 +9,9 @@ export default ({ posts }) => (
     <ul>
       {posts.map(post => (
         <li key={post.id}>
-          <Link to={post.frontmatter.path}>{post.frontmatter.title}</Link>
+          <Styled.a as={Link} to={post.frontmatter.path}>
+            {post.frontmatter.title}
+          </Styled.a>
         </li>
       ))}
     </ul>

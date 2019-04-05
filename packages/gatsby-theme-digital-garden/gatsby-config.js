@@ -26,7 +26,7 @@ module.exports = options => {
       {
         resolve: `gatsby-plugin-page-creator`,
         options: {
-          path: path.join(process.cwd(), `pages`)
+          path: path.resolve(`pages`)
         }
       },
       'gatsby-plugin-redirects',

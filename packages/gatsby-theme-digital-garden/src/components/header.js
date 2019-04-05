@@ -16,9 +16,9 @@ export default () => {
         bg: 'background'
       })}
     >
-      <Box as={Link} to="/">
+      <Styled.a as={Link} to="/">
         {title}
-      </Box>
+      </Styled.a>
       <Box mx="auto" />
       <Styled.a as={Link} to="/writing">
         Writing

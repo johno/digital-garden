@@ -1,11 +1,14 @@
 import React from 'react'
 import { Link } from 'gatsby'
+import { Styled } from 'theme-ui'
 
 export default ({ files }) => (
   <ul>
     {files.map(url => (
       <li key={url}>
-        <Link to={url}>{url}</Link>
+        <Styled.a as={Link} to={url}>
+          {url}
+        </Styled.a>
       </li>
     ))}
   </ul>
