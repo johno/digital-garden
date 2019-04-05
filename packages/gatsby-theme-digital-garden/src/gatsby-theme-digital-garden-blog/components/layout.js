@@ -1,1 +1,1 @@
-export { default } from '../../gatsby-theme-system/layout'
+export { default } from '../../components/layout'

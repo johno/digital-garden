@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Header } from 'gatsby-theme-system'
+import { css } from 'theme-ui'
+import { Header } from 'theme-ui/layout'
 
 import { Box } from '../../components/ui'
 import useSiteMetadata from '../../use-site-metadata'
@@ -9,7 +10,11 @@ export default () => {
   const { title } = useSiteMetadata()
 
   return (
-    <Header bg="background">
+    <Header
+      css={css({
+        bg: 'background'
+      })}
+    >
       <Box as={Link} to="/">
         {title}
       </Box>

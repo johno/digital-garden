@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Header } from 'gatsby-theme-system'
+import { css, Styled } from 'theme-ui'
+import { Header } from 'theme-ui/layout'
 
 import { Box } from './ui'
 import useSiteMetadata from '../use-site-metadata'
@@ -9,22 +10,27 @@ export default () => {
   const { title } = useSiteMetadata()
 
   return (
-    <Header bg="background">
+    <Header
+      css={css({
+        p: [3, 4],
+        bg: 'background'
+      })}
+    >
       <Box as={Link} to="/">
         {title}
       </Box>
       <Box mx="auto" />
-      <Box as={Link} to="/writing">
+      <Styled.a as={Link} to="/writing">
         Writing
-      </Box>
+      </Styled.a>
       <Box mx={1} />
-      <Box as={Link} to="/txt" color="inherit">
+      <Styled.a as={Link} to="/txt">
         Notes
-      </Box>
+      </Styled.a>
       <Box mx={1} />
-      <Box as={Link} to="/contact" color="inherit">
+      <Styled.a as={Link} to="/contact">
         Contact
-      </Box>
+      </Styled.a>
     </Header>
   )
 }

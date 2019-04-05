@@ -9,7 +9,21 @@ export default {
     primary: blue,
     secondary: '#444',
     muted: '#888',
-    highlight: 'tomato',
+    highlight: 'tomato'
+  },
+  fonts: {
+    body: 'system-ui, sans-serif'
+  },
+  lineHeights: {
+    body: 1.5
+  },
+  styles: {
+    a: {
+      color: 'primary',
+      '&:hover': {
+        color: 'secondary'
+      }
+    },
     pre: {
       text: 'rebeccapurple',
       background: '#f6f3f9',

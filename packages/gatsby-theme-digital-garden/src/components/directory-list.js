@@ -10,7 +10,7 @@ export default ({ directories }) =>
     <>
       <Box py={3} style={{ display: 'flex', flexWrap: 'wrap' }}>
         {Object.entries(directories).map(([key, value]) => (
-          <Link to={value[0].pagePath}>
+          <Link key={key} to={value[0].pagePath}>
             <Box
               w={[1, 2, 2]}
               p={3}
