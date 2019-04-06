@@ -27,7 +27,8 @@ export default {
     pre: {
       text: 'rebeccapurple',
       background: '#f6f3f9',
-      overflowX: 'scroll'
+      overflowX: 'scroll',
+      p: 2
     },
     code: {
       text: 'rebeccapurple',
