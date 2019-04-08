@@ -22,11 +22,11 @@ export default () => {
         {title}
       </Styled.a>
       <Box mx="auto" />
-      <Styled.a as={Link} to="/writing">
+      <Styled.a as={Link} to={postsPath || '/writing'}>
         Writing
       </Styled.a>
       <Box mx={1} />
-      <Styled.a as={Link} to={notesPath}>
+      <Styled.a as={Link} to={notesPath || '/notes'}>
         Notes
       </Styled.a>
       <Box mx={1} />
