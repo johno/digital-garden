@@ -5,9 +5,11 @@ import { Header } from 'theme-ui/layout'
 
 import { Box } from './ui'
 import useSiteMetadata from '../use-site-metadata'
+import useOptions from '../use-options'
 
 export default () => {
   const { title } = useSiteMetadata()
+  const { notesPath, postsPath } = useOptions()
 
   return (
     <Header
@@ -20,11 +22,11 @@ export default () => {
         {title}
       </Styled.a>
       <Box mx="auto" />
-      <Styled.a as={Link} to="/writing">
+      <Styled.a as={Link} to={postsPath || '/writing'}>
         Writing
       </Styled.a>
       <Box mx={1} />
-      <Styled.a as={Link} to="/txt">
+      <Styled.a as={Link} to={notesPath || '/notes'}>
         Notes
       </Styled.a>
       <Box mx={1} />
