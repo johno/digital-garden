@@ -24,6 +24,9 @@ export default {
         color: 'secondary'
       }
     },
+    img: {
+      maxWidth: '100%'
+    },
     pre: {
       text: 'rebeccapurple',
       background: '#f6f3f9',
