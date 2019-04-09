@@ -1,6 +1,7 @@
 const fs = require(`fs`)
 const path = require(`path`)
 const mkdirp = require(`mkdirp`)
+const crypto = require('crypto')
 const Debug = require(`debug`)
 
 const debug = Debug(`gatsby-theme-digital-garden`)
@@ -125,6 +126,38 @@ exports.onCreateWebpackConfig = ({ loaders, actions }) => {
           use: [loaders.js()]
         }
       ]
+    }
+  })
+}
+
+exports.sourceNodes = (
+  { actions: { createTypes, createNode }, schema },
+  { notesPath = '/notes' }
+) => {
+  // Create the Garden type to solidify the field data types
+  createTypes(`type Garden implements Node {
+notesPath: String!
+postsPath: String
+}`)
+
+  // create garden data from plugin config
+  const gardenData = {
+    notesPath
+  }
+
+  createNode({
+    ...gardenData,
+    id: `gatsby-theme-digital-garden-root`,
+    parent: null,
+    children: [],
+    internal: {
+      type: `Garden`,
+      contentDigest: crypto
+        .createHash(`md5`)
+        .update(JSON.stringify(gardenData))
+        .digest(`hex`),
+      content: JSON.stringify(gardenData),
+      description: `Digital Garden Metadata`
     }
   })
 }
