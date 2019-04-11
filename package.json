@@ -3,6 +3,7 @@
   "name": "digital-garden",
   "version": "0.0.0",
   "scripts": {
+    "publish-ci": "lerna publish -y --canary --preid ci --npm-tag=ci",
     "publish": "lerna publish"
   },
   "workspaces": [
@@ -22,6 +23,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,md,mdx}": ["prettier --write --no-semi --single-quote", "git add"]
+    "*.{js,md,mdx}": [
+      "prettier --write --no-semi --single-quote",
+      "git add"
+    ]
   }
 }
