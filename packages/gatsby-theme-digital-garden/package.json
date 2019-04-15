@@ -35,7 +35,7 @@
     "is-present": "^1.0.0",
     "mdx-blocks": "^0.0.3",
     "react-feather": "^1.1.6",
-    "theme-ui": "^0.0.0-5"
+    "theme-ui": "^0.0.4"
   },
   "gitHead": "b57bef4bf325ed0008dfa49e7f7ef204bed97194"
 }
