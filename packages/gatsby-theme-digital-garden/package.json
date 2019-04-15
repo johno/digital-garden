@@ -33,7 +33,6 @@
     "gatsby-plugin-redirects": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.25",
     "is-present": "^1.0.0",
-    "mdx-blocks": "^0.0.3",
     "react-feather": "^1.1.6",
     "theme-ui": "^0.0.4"
   },
