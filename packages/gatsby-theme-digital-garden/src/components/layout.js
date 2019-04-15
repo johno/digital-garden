@@ -1,6 +1,6 @@
 import React from 'react'
 import { Global } from '@emotion/core'
-import { ThemeProvider, css } from 'theme-ui'
+import { css } from 'theme-ui'
 import { Layout, Main, Container } from 'theme-ui/layout'
 import Header from './header'
 
