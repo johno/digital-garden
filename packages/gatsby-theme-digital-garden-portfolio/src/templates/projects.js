@@ -16,7 +16,7 @@ export default ({
 
 export const pageQuery = graphql`
   query ProjectList {
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(sort: { fields: [frontmatter___order], order: ASC }) {
       edges {
         node {
           id
@@ -29,6 +29,8 @@ export const pageQuery = graphql`
           frontmatter {
             title
             path
+            description
+            image
           }
         }
       }

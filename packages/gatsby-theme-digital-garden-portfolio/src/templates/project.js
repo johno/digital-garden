@@ -11,9 +11,7 @@ export const pageQuery = graphql`
       frontmatter {
         title
         description
-        date
         image
-        url
       }
       code {
         body
