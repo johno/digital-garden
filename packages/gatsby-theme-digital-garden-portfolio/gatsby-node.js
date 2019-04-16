@@ -47,12 +47,12 @@ exports.createPages = async ({ graphql, actions }, opts) => {
   }
 
   const { mdxPages } = result.data
-  const posts = mdxPages.edges.filter(
+  const projects = mdxPages.edges.filter(
     ({ node }) => node.parent.sourceInstanceName === 'projects'
   )
 
-  // Create posts pages
-  posts.forEach(({ node }) => {
+  // Create projects pages
+  projects.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path || toProjectsPath(node),
       context: node,
