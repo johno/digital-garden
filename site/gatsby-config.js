@@ -11,6 +11,13 @@ module.exports = {
       options: {
         postsPath: '/writing'
       }
+    },
+    {
+      resolve: 'gatsby-theme-digital-garden-portfolio',
+      options: {
+        projectsPath: '/work',
+        projects: 'projects'
+      }
     }
   ],
   siteMetadata: {
