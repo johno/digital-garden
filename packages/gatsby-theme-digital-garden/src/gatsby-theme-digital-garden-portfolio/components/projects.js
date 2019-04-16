@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Styled } from 'theme-ui'
+import { Styled, css } from 'theme-ui'
 
 import Layout from '../../components/layout'
+import BackgroundImage from '../../components/background-image'
 
 export default ({ projects }) => (
   <Layout>
@@ -34,9 +35,15 @@ export default ({ projects }) => (
               textDecoration: 'none'
             })}
           >
-            <Styled.img src={project.frontmatter.image} />
-            <Styled.h3>{project.frontmatter.title}</Styled.h3>
-            <Styled.p>{project.frontmatter.title}</Styled.p>
+            <BackgroundImage src={project.frontmatter.image} />
+            <Styled.h3
+              css={css({
+                mb: 0
+              })}
+            >
+              {project.frontmatter.title}
+            </Styled.h3>
+            <Styled.p css={css({ m: 0 })}>{project.frontmatter.title}</Styled.p>
           </Link>
         </li>
       ))}

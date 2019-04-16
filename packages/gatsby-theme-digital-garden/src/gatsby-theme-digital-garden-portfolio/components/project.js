@@ -12,8 +12,20 @@ export default ({
   }
 }) => (
   <Layout>
-    <Styled.h1>{title}</Styled.h1>
-    <Styled.p>{description}</Styled.p>
+    <Styled.h1
+      css={css({
+        mb: 0
+      })}
+    >
+      {title}
+    </Styled.h1>
+    <Styled.p
+      css={css({
+        mt: 0
+      })}
+    >
+      {description}
+    </Styled.p>
     {image && <Styled.img src={image} />}
     <MDXRenderer children={code.body} />
   </Layout>
