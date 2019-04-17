@@ -1,0 +1,29 @@
+{
+  "name": "gatsby-theme-digital-garden-portfolio",
+  "version": "0.0.21",
+  "main": "index.js",
+  "author": "Brent Jackson <jxnblk@gmail.com>",
+  "license": "MIT",
+  "keywords": [
+    "gatsby",
+    "gatsby-theme",
+    "react"
+  ],
+  "devDependencies": {
+    "gatsby": "^2.1.32",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "peerDependencies": {
+    "gatsby": "^2.1.32",
+    "react": "^16.8.4",
+    "react-dom": "^16.8.4"
+  },
+  "dependencies": {
+    "debug": "^4.1.1",
+    "gatsby-plugin-compile-es6-packages": "^1.1.0",
+    "gatsby-plugin-page-creator": "^2.0.12",
+    "gatsby-source-filesystem": "^2.0.29",
+    "mkdirp": "^0.5.1"
+  }
+}
