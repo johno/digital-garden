@@ -1,5 +1,5 @@
 import React from 'react'
-import MDXRenderer from 'gatsby-mdx/mdx-renderer'
+import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 
 import Layout from '../../components/layout'
 import { Heading } from '../../components/ui'

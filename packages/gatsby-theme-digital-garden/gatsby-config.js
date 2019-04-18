@@ -7,7 +7,7 @@ module.exports = options => {
     __experimentalThemes: [],
     plugins: [
       mdx && {
-        resolve: 'gatsby-mdx',
+        resolve: 'gatsby-plugin-mdx',
         options: {
           extensions: [`.md`, `.mdx`],
           defaultLayouts: {
