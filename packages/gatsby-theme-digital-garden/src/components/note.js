@@ -5,11 +5,11 @@ import Layout from './layout'
 
 const WikiPage = ({
   data: {
-    note: { code }
+    note: { body }
   }
 }) => (
   <Layout>
-    <MDXRenderer>{code.body}</MDXRenderer>
+    <MDXRenderer>{body}</MDXRenderer>
   </Layout>
 )
 
