@@ -12,9 +12,7 @@ export const pageQuery = graphql`
         description
         image
       }
-      code {
-        body
-      }
+      body
     }
   }
 `
