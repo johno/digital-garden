@@ -8,13 +8,13 @@ const Post = ({
   data: {
     post: {
       frontmatter: { title },
-      code
+      body
     }
   }
 }) => (
   <Layout>
     <Heading>{title}</Heading>
-    <MDXRenderer>{code.body}</MDXRenderer>
+    <MDXRenderer>{body}</MDXRenderer>
   </Layout>
 )
 
