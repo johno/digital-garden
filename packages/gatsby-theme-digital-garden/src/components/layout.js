@@ -14,7 +14,8 @@ export default props => (
         body: {
           margin: 0,
           color: 'text',
-          bg: 'background'
+          bg: 'background',
+          fontFamily: 'body'
         }
       })}
     />
