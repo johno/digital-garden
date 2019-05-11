@@ -15,7 +15,8 @@ export default () => {
     <Header
       css={css({
         p: [3, 4],
-        bg: 'background'
+        bg: 'background',
+        color: 'red'
       })}
     >
       <Styled.a as={Link} to="/">
