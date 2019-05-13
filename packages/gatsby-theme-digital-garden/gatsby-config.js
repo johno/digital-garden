@@ -35,7 +35,7 @@ module.exports = options => {
       {
         resolve: 'gatsby-plugin-compile-es6-packages',
         options: {
-          modules: ['theme-ui']
+          modules: ['gatsby-theme-digital-garden', 'theme-ui']
         }
       }
     ].filter(Boolean)

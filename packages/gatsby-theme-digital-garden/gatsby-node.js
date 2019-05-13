@@ -81,9 +81,20 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
   }, {})
 
   Object.entries(groupedNotes).map(([key, value]) => {
+    const breadcrumbs = key.split('/').reduce((acc, dir) => {
+      return [
+        ...acc,
+        {
+          name: dir,
+          url: path.join(notesPath, dir)
+        }
+      ]
+    }, [])
+
     createPage({
       path: path.join(notesPath, key),
       context: {
+        breadcrumbs,
         urls: value.map(v => v.url)
       },
       component: Notes
@@ -112,20 +123,6 @@ exports.onPreBootstrap = ({ store }, opts) => {
     debug(`Initializing ${dir} directory`)
     if (!fs.existsSync(dir)) {
       mkdirp.sync(dir)
-    }
-  })
-}
-
-exports.onCreateWebpackConfig = ({ loaders, actions }) => {
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          include: path.dirname(require.resolve(`gatsby-theme-digital-garden`)),
-          use: [loaders.js()]
-        }
-      ]
     }
   })
 }
