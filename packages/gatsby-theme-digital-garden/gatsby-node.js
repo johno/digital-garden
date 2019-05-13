@@ -81,7 +81,7 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
   }, {})
 
   Object.entries(groupedNotes).map(([key, value]) => {
-    const breadcrumbs = key.split('/').reduce((acc, dir) => {
+    const breadcrumbs = key.split(path.sep).reduce((acc, dir) => {
       return [
         ...acc,
         {
