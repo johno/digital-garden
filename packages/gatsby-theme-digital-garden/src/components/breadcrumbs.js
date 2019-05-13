@@ -1,12 +1,37 @@
 import React from 'react'
-import { Styled } from 'theme-ui'
+import { Link } from 'gatsby'
+import { Styled, css } from 'theme-ui'
 
-export default ({ links }) => (
-  <nav>
-    {links.map(link => (
-      <Styled.a to={link.url} key={link.url}>
-        {link.name}
+import useOptions from '../use-options'
+
+export default ({ links }) => {
+  const { notesPath } = useOptions()
+
+  return (
+    <nav
+      css={css({
+        mb: 3,
+        '& a': {
+          textDecoration: 'none',
+          fontWeight: 'bold'
+        }
+      })}
+    >
+      <Styled.a as={Link} to={'/'}>
+        ~
       </Styled.a>
-    ))}
-  </nav>
-)
+      <span css={css({ px: 2 })} children="/" />
+      <Styled.a as={Link} to={notesPath}>
+        {notesPath.replace(/^\//, '')}
+      </Styled.a>
+      {links.map(link => (
+        <>
+          <span css={css({ px: 2 })} children="/" />
+          <Styled.a as={Link} to={link.url} key={link.url}>
+            {link.name}
+          </Styled.a>
+        </>
+      ))}
+    </nav>
+  )
+}
