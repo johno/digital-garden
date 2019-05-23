@@ -7,7 +7,7 @@ export default ({
   data: {
     project: {
       frontmatter: { title, description, image },
-      code
+      body
     }
   }
 }) => (
@@ -27,6 +27,6 @@ export default ({
       {description}
     </Styled.p>
     {image && <Styled.img src={image} />}
-    <MDXRenderer children={code.body} />
+    <MDXRenderer children={body} />
   </Layout>
 )
