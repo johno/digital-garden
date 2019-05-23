@@ -11,7 +11,9 @@ export const pageQuery = graphql`
       frontmatter {
         title
       }
-      body
+      code {
+        body
+      }
     }
     image: ogImage {
       src(text: $title)

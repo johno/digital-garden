@@ -81,19 +81,3 @@ exports.onPreBootstrap = ({ store }, opts) => {
     }
   })
 }
-
-exports.onCreateWebpackConfig = ({ loaders, actions }) => {
-  actions.setWebpackConfig({
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          include: path.dirname(
-            require.resolve(`gatsby-theme-digital-garden-blog`)
-          ),
-          use: [loaders.js()]
-        }
-      ]
-    }
-  })
-}

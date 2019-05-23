@@ -1,9 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { css, Styled } from 'theme-ui'
-import { Header } from 'theme-ui/layout'
+import { css, Styled, Box, Header } from 'theme-ui'
 
-import { Box } from './ui'
 import useSiteMetadata from '../use-site-metadata'
 import useOptions from '../use-options'
 

@@ -11,24 +11,20 @@
     "react"
   ],
   "devDependencies": {
-    "gatsby": "^2.4.3",
+    "gatsby": "^2.4.6",
+    "gatsby-theme-digital-garden": "^0.0.30",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "peerDependencies": {
-    "gatsby": "^2.4.3",
+    "gatsby": "^2.4.6",
+    "gatsby-theme-digital-garden": "^0.0.30",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "dependencies": {
-    "@mdx-js/mdx": "^1.0.18",
-    "@mdx-js/react": "^1.0.16",
-    "gatsby-plugin-meta-redirect": "^1.1.1",
-    "gatsby-plugin-og-image": "0.0.1",
-    "gatsby-plugin-page-creator": "^2.0.12",
-    "gatsby-plugin-redirects": "^1.0.0",
-    "gatsby-source-filesystem": "^2.0.33",
-    "is-present": "^1.0.0",
-    "react-feather": "^1.1.6"
+    "debug": "^4.1.1",
+    "gatsby-source-filesystem": "^2.0.35",
+    "mkdirp": "^0.5.1"
   }
 }

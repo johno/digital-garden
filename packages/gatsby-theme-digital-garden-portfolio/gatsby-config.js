@@ -10,12 +10,6 @@ module.exports = options => {
           path: options.projects || 'projects',
           name: 'projects'
         }
-      },
-      {
-        resolve: 'gatsby-plugin-compile-es6-packages',
-        options: {
-          modules: [pkg.name]
-        }
       }
     ]
   }

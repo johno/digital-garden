@@ -3,7 +3,7 @@ import { graphql, useStaticQuery } from 'gatsby'
 export default () => {
   const data = useStaticQuery(graphql`
     {
-      garden(id: { eq: "gatsby-theme-digital-garden-root" }) {
+      notesConfig(id: { eq: "gatsby-theme-notes-config" }) {
         notesPath
         postsPath
       }
