@@ -1,6 +1,6 @@
 {
   "name": "digital-garden",
-  "version": "0.0.30",
+  "version": "0.0.31",
   "description": "A CLI for digital gardening built on Gatsby",
   "main": "index.js",
   "scripts": {
