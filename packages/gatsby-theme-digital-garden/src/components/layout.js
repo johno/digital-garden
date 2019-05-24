@@ -3,6 +3,7 @@ import { Global } from '@emotion/core'
 import { css } from 'theme-ui'
 import { Layout, Main, Container } from 'theme-ui/layout'
 import Header from './header'
+import { SEO } from './seo'
 
 export default props => (
   <>
@@ -20,6 +21,11 @@ export default props => (
       })}
     />
     <Layout>
+      {'*' in props && (
+        <SEO
+          title={props['*'].charAt(0).toUpperCase() + props['*'].slice(1) || ''}
+        />
+      )}
       <Header />
       <Main>
         <Container>{props.children}</Container>

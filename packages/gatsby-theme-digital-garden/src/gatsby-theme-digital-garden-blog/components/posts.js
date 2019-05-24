@@ -3,9 +3,16 @@ import { Link } from 'gatsby'
 import { Styled } from 'theme-ui'
 
 import Layout from '../../components/layout'
+import { SEO } from '../../components/seo'
+import useOptions from '../../use-options'
 
 export default ({ posts }) => (
   <Layout>
+    <SEO
+      title={
+        useOptions().postsPath ? useOptions().postsPath.slice(1) : 'Writing'
+      }
+    />
     <ul>
       {posts.map(post => (
         <li key={post.id}>

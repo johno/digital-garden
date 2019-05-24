@@ -9,6 +9,11 @@ export const pageQuery = graphql`
     note: mdx(id: { eq: $id }) {
       id
       body
+      frontmatter {
+        title
+        description
+      }
+      fileAbsolutePath
     }
     image: ogImage {
       src(text: $title)

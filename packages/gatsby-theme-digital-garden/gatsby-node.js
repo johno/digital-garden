@@ -135,6 +135,8 @@ exports.sourceNodes = (
   createTypes(`type Garden implements Node {
 notesPath: String!
 postsPath: String
+projectsPath: String
+projects: String
 }`)
 
   // create garden data from plugin config

@@ -6,6 +6,8 @@ export default () => {
       garden(id: { eq: "gatsby-theme-digital-garden-root" }) {
         notesPath
         postsPath
+        projectsPath
+        projects
       }
     }
   `)
