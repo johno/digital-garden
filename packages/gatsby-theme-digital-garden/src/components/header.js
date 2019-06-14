@@ -1,15 +1,14 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import { css, Styled } from 'theme-ui'
+import { css } from 'theme-ui'
 import { Header } from 'theme-ui/layout'
 
+import HeaderLink from './header-link'
 import { Box } from './ui'
-import useSiteMetadata from '../use-site-metadata'
 import useOptions from '../use-options'
 
 export default () => {
-  const { title } = useSiteMetadata()
-  const { notesPath, postsPath } = useOptions()
+  const { header } = useOptions()
+  const { home, links } = header
 
   return (
     <Header
@@ -19,21 +18,13 @@ export default () => {
         color: 'red'
       })}
     >
-      <Styled.a as={Link} to="/">
-        {title}
-      </Styled.a>
+      <HeaderLink href={home.href} label={home.label} />
       <Box mx="auto" />
-      <Styled.a as={Link} to={postsPath || '/writing'}>
-        Writing
-      </Styled.a>
-      <Box mx={1} />
-      <Styled.a as={Link} to={notesPath || '/notes'}>
-        Notes
-      </Styled.a>
-      <Box mx={1} />
-      <Styled.a as={Link} to="/contact">
-        Contact
-      </Styled.a>
+      {links.map(({ href, label }) => (
+        <Box key={href} mx={1}>
+          <HeaderLink href={href} label={label} />
+        </Box>
+      ))}
     </Header>
   )
 }

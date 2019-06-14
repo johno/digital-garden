@@ -3,6 +3,18 @@ module.exports = {
     {
       resolve: 'gatsby-theme-digital-garden',
       options: {
+        header: {
+          home: {
+            href: '/',
+            label: 'Digital Garden'
+          },
+          links: [
+            {
+              href: '/txt',
+              label: 'Notes'
+            }
+          ]
+        },
         postsPath: '/writing',
         notesPath: '/txt'
       }

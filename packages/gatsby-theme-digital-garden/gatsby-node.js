@@ -129,16 +129,43 @@ exports.onPreBootstrap = ({ store }, opts) => {
 
 exports.sourceNodes = (
   { actions: { createTypes, createNode }, schema },
-  { notesPath = '/notes' }
+  {
+    header = {
+      home: {
+        href: '/',
+        label: 'Digital Garden'
+      },
+      links: [
+        {
+          href: '/notes',
+          label: 'Notes'
+        }
+      ]
+    },
+    notesPath = '/notes'
+  }
 ) => {
+  // HeaderLink type
+  createTypes(`type HeaderLink implements Node {
+href: String!
+label: String!
+}`)
+  // Header type
+  createTypes(`type Header implements Node {
+home: HeaderLink,
+links: [HeaderLink]
+}`)
+
   // Create the Garden type to solidify the field data types
   createTypes(`type Garden implements Node {
+header: Header!
 notesPath: String!
 postsPath: String
 }`)
 
   // create garden data from plugin config
   const gardenData = {
+    header,
     notesPath
   }
 
