@@ -29,6 +29,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             title
+            description
             path
           }
         }

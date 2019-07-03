@@ -161,6 +161,8 @@ links: [HeaderLink]
 header: Header!
 notesPath: String!
 postsPath: String
+projectsPath: String
+projects: String
 }`)
 
   // create garden data from plugin config

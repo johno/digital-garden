@@ -16,6 +16,8 @@ export default () => {
         }
         notesPath
         postsPath
+        projectsPath
+        projects
       }
     }
   `)

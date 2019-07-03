@@ -28,6 +28,7 @@
     "emotion-theming": "^10.0.10",
     "gatsby-plugin-compile-es6-packages": "^1.1.0",
     "gatsby-plugin-emotion": "^4.0.6",
+    "gatsby-plugin-react-helmet": "^3.0.12",
     "gatsby-plugin-mdx": "rc",
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-og-image": "0.0.1",
@@ -35,6 +36,8 @@
     "gatsby-plugin-redirects": "^1.0.0",
     "gatsby-source-filesystem": "^2.0.33",
     "is-present": "^1.0.0",
+    "path": "^0.12.7",
+    "react-helmet": "^6.0.0-beta",
     "react-feather": "^1.1.6",
     "theme-ui": "^0.0.11"
   },

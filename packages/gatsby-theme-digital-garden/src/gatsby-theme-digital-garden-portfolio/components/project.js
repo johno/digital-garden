@@ -2,6 +2,7 @@ import React from 'react'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
 import { Styled, css } from 'theme-ui'
 import Layout from '../../components/layout'
+import { SEO } from '../../components/seo'
 
 export default ({
   data: {
@@ -12,6 +13,7 @@ export default ({
   }
 }) => (
   <Layout>
+    <SEO title={title} description={description} />
     <Styled.h1
       css={css({
         mb: 0

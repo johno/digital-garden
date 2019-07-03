@@ -10,6 +10,7 @@ export const pageQuery = graphql`
       id
       frontmatter {
         title
+        description
       }
       body
     }
