@@ -6,7 +6,6 @@ const seoTitle = title =>
   title ? `${title} | ${useSiteMetadata().title}` : useSiteMetadata().title
 
 const metaDescription = (title, description) => {
-  console.log(title, description)
   if (description) {
     return description
   } else if (title && useSiteMetadata().description) {

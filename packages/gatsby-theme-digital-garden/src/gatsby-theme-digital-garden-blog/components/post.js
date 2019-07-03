@@ -1,8 +1,8 @@
 import React from 'react'
 import MDXRenderer from 'gatsby-plugin-mdx/mdx-renderer'
+import { Styled } from 'theme-ui'
 
 import Layout from '../../components/layout'
-import { Heading } from '../../components/ui'
 import { SEO } from '../../components/seo'
 
 const Post = ({
@@ -15,7 +15,7 @@ const Post = ({
 }) => (
   <Layout>
     <SEO title={title} description={description} />
-    <Heading>{title}</Heading>
+    <Styled.h1>{title}</Styled.h1>
     <MDXRenderer>{body}</MDXRenderer>
   </Layout>
 )

@@ -1,32 +1,36 @@
 import React from 'react'
 import isPresent from 'is-present'
-import { Styled } from 'theme-ui'
+import { Styled, css } from 'theme-ui'
 import { Link } from 'gatsby'
 import { Folder } from 'react-feather'
-
-import { Box } from '../components/ui'
 
 export default ({ directories }) =>
   isPresent(directories) ? (
     <>
-      <Box py={3} style={{ display: 'flex', flexWrap: 'wrap' }}>
+      <div
+        css={css({
+          py: 3,
+          display: 'flex',
+          flexWrap: 'wrap'
+        })}
+      >
         {Object.entries(directories).map(([key, value]) => (
           <Styled.a as={Link} key={key} to={value[0].pagePath}>
-            <Box
-              w={[1, 2, 2]}
-              p={3}
+            <div
               key={key}
-              style={{
+              css={css({
+                w: [1, 2, 2],
+                p: 3,
                 display: 'flex',
                 alignItems: 'center'
-              }}
+              })}
             >
               <Folder style={{ marginRight: '10px' }} />
               <span>{key}</span>
-            </Box>
+            </div>
           </Styled.a>
         ))}
-      </Box>
+      </div>
       <hr />
     </>
   ) : null

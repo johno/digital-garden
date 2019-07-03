@@ -3,7 +3,6 @@ import { css } from 'theme-ui'
 import { Header } from 'theme-ui/layout'
 
 import HeaderLink from './header-link'
-import { Box } from './ui'
 import useOptions from '../use-options'
 
 export default () => {
@@ -19,11 +18,11 @@ export default () => {
       })}
     >
       <HeaderLink href={home.href} label={home.label} />
-      <Box mx="auto" />
+      <div css={css({ mx: 'auto' })} />
       {links.map(({ href, label }) => (
-        <Box key={href} mx={1}>
+        <div key={href} css={css({ mx: 1 })}>
           <HeaderLink href={href} label={label} />
-        </Box>
+        </div>
       ))}
     </Header>
   )

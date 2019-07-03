@@ -1,5 +1,13 @@
 module.exports = {
-  __experimentalThemes: [
+  siteMetadata: {
+    title: 'Digital Garden',
+    email: 'johnotander@gmail.com',
+    social: {
+      twitter: '4lpine',
+      github: 'johno'
+    }
+  },
+  plugins: [
     {
       resolve: 'gatsby-theme-digital-garden',
       options: {
@@ -19,13 +27,5 @@ module.exports = {
         notesPath: '/txt'
       }
     }
-  ],
-  siteMetadata: {
-    title: 'Digital Garden',
-    email: 'johnotander@gmail.com',
-    social: {
-      twitter: '4lpine',
-      github: 'johno'
-    }
-  }
+  ]
 }
