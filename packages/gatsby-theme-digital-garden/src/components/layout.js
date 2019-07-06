@@ -21,11 +21,7 @@ export default props => (
       })}
     />
     <Layout>
-      {'*' in props && (
-        <SEO
-          title={props['*'].charAt(0).toUpperCase() + props['*'].slice(1) || ''}
-        />
-      )}
+      <SEO />
       <Header />
       <Main>
         <Container>{props.children}</Container>
