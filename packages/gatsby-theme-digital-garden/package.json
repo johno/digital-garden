@@ -37,7 +37,7 @@
     "gatsby-source-filesystem": "^2.1.2",
     "is-present": "^1.0.0",
     "path": "^0.12.7",
-    "react-feather": "^1.1.6",
+    "react-feather": "^2.0.0",
     "react-helmet": "^6.0.0-beta",
     "theme-ui": "^0.2.2"
   },
