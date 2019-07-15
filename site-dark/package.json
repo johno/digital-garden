@@ -7,7 +7,7 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "2.13.21",
+    "gatsby": "2.13.22",
     "gatsby-theme-digital-garden": "*",
     "react": "16.8.6",
     "react-dom": "16.8.6"

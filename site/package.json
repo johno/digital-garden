@@ -7,7 +7,7 @@
     "build": "gatsby build"
   },
   "dependencies": {
-    "gatsby": "2.13.21",
+    "gatsby": "2.13.22",
     "gatsby-theme-digital-garden": "*",
     "gatsby-theme-digital-garden-blog": "*",
     "gatsby-theme-digital-garden-portfolio": "*",
