@@ -13,14 +13,14 @@ export default ({ posts }) => (
         useOptions().postsPath ? useOptions().postsPath.slice(1) : 'Writing'
       }
     />
-    <ul>
+    <Styled.ul>
       {posts.map(post => (
-        <li key={post.id}>
+        <Styled.li key={post.id}>
           <Styled.a as={Link} to={post.frontmatter.path}>
             {post.frontmatter.title}
           </Styled.a>
-        </li>
+        </Styled.li>
       ))}
-    </ul>
+    </Styled.ul>
   </Layout>
 )
