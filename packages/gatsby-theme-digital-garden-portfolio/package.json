@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "debug": "^4.1.1",
-    "gatsby-plugin-compile-es6-packages": "^1.1.0",
+    "gatsby-plugin-compile-es6-packages": "^2.0.0",
     "gatsby-plugin-page-creator": "^2.1.2",
     "gatsby-source-filesystem": "^2.1.2",
     "mkdirp": "^0.5.1"
