@@ -2,7 +2,7 @@ import React from 'react'
 import { Global } from '@emotion/core'
 import { css } from 'theme-ui'
 import { Layout, Main, Container } from 'theme-ui/layout'
-import Header from './header'
+import HeaderContainer from './header-container'
 import { SEO } from './seo'
 
 export default props => (
@@ -22,7 +22,7 @@ export default props => (
     />
     <Layout>
       <SEO />
-      <Header />
+      <HeaderContainer />
       <Main>
         <Container>{props.children}</Container>
       </Main>
