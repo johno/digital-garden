@@ -3,11 +3,9 @@ import { css } from 'theme-ui'
 import { Header } from 'theme-ui/layout'
 
 import HeaderLink from './header-link'
-import useOptions from '../use-options'
 
-export default () => {
-  const { header } = useOptions()
-  const { home, links } = header
+export default props => {
+  const { home, links } = props
 
   return (
     <Header
