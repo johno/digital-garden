@@ -52,7 +52,9 @@ export default ({ projects }) => (
             >
               {project.frontmatter.title}
             </Styled.h3>
-            <Styled.p css={css({ m: 0 })}>{project.frontmatter.title}</Styled.p>
+            <Styled.p css={css({ m: 0 })}>
+              {project.frontmatter.description}
+            </Styled.p>
           </Link>
         </li>
       ))}
