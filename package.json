@@ -5,7 +5,8 @@
   "scripts": {
     "start": "yarn workspace gatsby-starter-digital-garden start",
     "publish-ci": "lerna publish -y --canary --preid ci --npm-tag=ci",
-    "publish": "lerna publish"
+    "publish": "lerna publish",
+    "test": "yarn workspace gatsby-starter-digital-garden build"
   },
   "workspaces": [
     "packages/*",
