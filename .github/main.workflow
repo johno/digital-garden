@@ -1,6 +1,6 @@
 workflow "Publish packages and starters" {
   on = "push"
-  resolves = ["johno/actions-yarn@master-1"]
+  resolves = ["publish:ci"]
 }
 
 action "master" {
@@ -21,7 +21,7 @@ action "johno/actions-yarn@master" {
   args = "install"
 }
 
-action "johno/actions-yarn@master-1" {
+action "publish:ci" {
   uses = "johno/actions-yarn@master"
   needs = ["johno/actions-yarn@master"]
   args = "publish:ci"
@@ -30,15 +30,15 @@ action "johno/actions-yarn@master-1" {
 
 workflow "Test" {
   on = "push"
-  resolves = ["johno/actions-yarn@master-2"]
+  resolves = ["test"]
 }
 
 action "test:install" {
-  uses = "johno/actions-yarn"
+  uses = "johno/actions-yarn@master"
   args = "install"
 }
 
-action "johno/actions-yarn@master-2" {
+action "test" {
   uses = "johno/actions-yarn@master"
   needs = ["test:install"]
   args = "test"
