@@ -5,9 +5,11 @@
   "author": "John Otander",
   "license": "MIT",
   "main": "index.js",
+  "repository": "johno/digital-garden",
   "keywords": [
     "gatsby",
     "gatsby-theme",
+    "gatsby-plugin",
     "react"
   ],
   "devDependencies": {

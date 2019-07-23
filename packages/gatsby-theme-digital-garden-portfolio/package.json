@@ -4,9 +4,11 @@
   "main": "index.js",
   "author": "Brent Jackson <jxnblk@gmail.com>",
   "license": "MIT",
+  "repository": "johno/digital-garden",
   "keywords": [
     "gatsby",
     "gatsby-theme",
+    "gatsby-plugin",
     "react"
   ],
   "devDependencies": {
