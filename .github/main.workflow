@@ -27,3 +27,19 @@ action "johno/actions-yarn@master-1" {
   args = "publish:ci"
   secrets = ["NPM_AUTH_TOKEN"]
 }
+
+workflow "Test" {
+  on = "push"
+  resolves = ["johno/actions-yarn@master-2"]
+}
+
+action "test:install" {
+  uses = "johno/actions-yarn"
+  args = "install"
+}
+
+action "johno/actions-yarn@master-2" {
+  uses = "johno/actions-yarn@master"
+  needs = ["test:install"]
+  args = "test"
+}
