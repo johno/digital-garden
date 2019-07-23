@@ -1,6 +1,6 @@
 workflow "Publish packages and starters" {
   on = "push"
-  resolves = ["johno/actions-push-subdirectories@master"]
+  resolves = ["johno/actions-yarn@master-1"]
 }
 
 action "master" {
@@ -13,4 +13,17 @@ action "johno/actions-push-subdirectories@master" {
   needs = ["master"]
   args = "examples johno"
   secrets = ["API_TOKEN_GITHUB"]
+}
+
+action "johno/actions-yarn@master" {
+  uses = "johno/actions-yarn@master"
+  needs = ["johno/actions-push-subdirectories@master"]
+  args = "install"
+}
+
+action "johno/actions-yarn@master-1" {
+  uses = "johno/actions-yarn@master"
+  needs = ["johno/actions-yarn@master"]
+  args = "publish:ci"
+  secrets = ["NPM_AUTH_TOKEN"]
 }
