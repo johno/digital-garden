@@ -803,7 +803,7 @@
   resolved "https://registry.yarnpkg.com/@emotion/hash/-/hash-0.7.2.tgz#53211e564604beb9befa7a4400ebf8147473eeef"
   integrity sha512-RMtr1i6E8MXaBWwhXL3yeOU8JXRnz8GNxHvaUfVvwxokvayUY0zoBeWbKw1S9XkufmGEEdQd228pSZXFkAln8Q==
 
-"@emotion/is-prop-valid@0.8.2", "@emotion/is-prop-valid@^0.8.1":
+"@emotion/is-prop-valid@^0.8.1":
   version "0.8.2"
   resolved "https://registry.yarnpkg.com/@emotion/is-prop-valid/-/is-prop-valid-0.8.2.tgz#b9692080da79041683021fcc32f96b40c54c59dc"
   integrity sha512-ZQIMAA2kLUWiUeMZNJDTeCwYRx1l8SQL0kHktze4COT22occKpDML1GDUXP5/sxhOMrZO8vZw773ni4H5Snrsg==
@@ -830,24 +830,6 @@
   version "0.9.3"
   resolved "https://registry.yarnpkg.com/@emotion/sheet/-/sheet-0.9.3.tgz#689f135ecf87d3c650ed0c4f5ddcbe579883564a"
   integrity sha512-c3Q6V7Df7jfwSq5AzQWbXHa5soeE4F5cbqi40xn0CzXxWW9/6Mxq48WJEtqfWzbZtW9odZdnRAkwCQwN12ob4A==
-
-"@emotion/styled-base@^10.0.14":
-  version "10.0.14"
-  resolved "https://registry.yarnpkg.com/@emotion/styled-base/-/styled-base-10.0.14.tgz#1b78a93e067ea852b2069339fcfd72c32ec91e4d"
-  integrity sha512-1nC5iO/Rk0DY47M5wXCyWpbo/woiwXWfVbNKDM3QRi7CKq8CwC++PQ5HgiYflFrAt1vjzIVZqnzrIn3idUoQgg==
-  dependencies:
-    "@babel/runtime" "^7.4.3"
-    "@emotion/is-prop-valid" "0.8.2"
-    "@emotion/serialize" "^0.11.8"
-    "@emotion/utils" "0.11.2"
-
-"@emotion/styled@^10.0.14":
-  version "10.0.14"
-  resolved "https://registry.yarnpkg.com/@emotion/styled/-/styled-10.0.14.tgz#538bcf0d67bf8f6de946bcfbee53dc7d0187b346"
-  integrity sha512-Ae8d5N/FmjvZKXjqWcjfhZhjCdkvxZSqD95Q72BYDNQnsOKLHIA4vWlMolLXDNkw1dIxV3l2pp82Z87HXj6eYQ==
-  dependencies:
-    "@emotion/styled-base" "^10.0.14"
-    babel-plugin-emotion "^10.0.14"
 
 "@emotion/stylis@0.8.4":
   version "0.8.4"
@@ -1956,6 +1938,11 @@
   resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.0.21.tgz#fc569b86d19f426774591fa401d999ddf6ea5948"
   integrity sha512-+7H1UfIytxKN/nSdojCRzUM/ZeQ6/EUg8F9bnY2NnPGuF+67cug6vZBAx9famtAey0Ms0dr2QAuCOd8k3SkhJg==
 
+"@mdx-js/react@^1.0.27":
+  version "1.0.27"
+  resolved "https://registry.yarnpkg.com/@mdx-js/react/-/react-1.0.27.tgz#7461e39f8880eceff8f48b0240e6cdc0f01cc8db"
+  integrity sha512-sCv3ItE5L6rdpnZR0s69C8KFgz4pmhGsH4de0ZiO+fiCC/L6asuKLubf9QZk3oG3vjebym/V593CE15vRXvvwQ==
+
 "@mikaelkristiansson/domready@^1.0.9":
   version "1.0.9"
   resolved "https://registry.yarnpkg.com/@mikaelkristiansson/domready/-/domready-1.0.9.tgz#b2b85d8ac7bb2797e577050b61aeaf1b26fbd906"
@@ -2065,10 +2052,10 @@
     escape-string-regexp "^1.0.5"
     lodash.deburr "^4.1.0"
 
-"@styled-system/css@^5.0.5":
-  version "5.0.11"
-  resolved "https://registry.yarnpkg.com/@styled-system/css/-/css-5.0.11.tgz#6e5aafc8a4730eab79e0dc79ac04eadae102b280"
-  integrity sha512-rq/KO2SEpUbk9dWIRdWEkNL3w6Eds55KGdAcD+9DttqrC+FwPXfk27ebmTMfwyIAiDES9uW7z57Bo6v34VUNqw==
+"@styled-system/css@^5.0.16":
+  version "5.0.16"
+  resolved "https://registry.yarnpkg.com/@styled-system/css/-/css-5.0.16.tgz#d71f1806ad28a92d19bab338749b395433edc94a"
+  integrity sha512-RT+jCj8Q5uXO3KQUzmgxdqUK9DdWfPp1vxf5rMJPf4Ho0hVXDa129s2L5MDMXKJGrALqTq9PuA2tVxtQHavFIQ==
 
 "@types/configstore@^2.1.1":
   version "2.1.1"
@@ -5045,15 +5032,6 @@ emojis-list@^2.0.0:
   resolved "https://registry.yarnpkg.com/emojis-list/-/emojis-list-2.1.0.tgz#4daa4d9db00f9819880c79fa457ae5b09a1fd389"
   integrity sha1-TapNnbAPmBmIDHn6RXrlsJof04k=
 
-emotion-theming@^10.0.14:
-  version "10.0.14"
-  resolved "https://registry.yarnpkg.com/emotion-theming/-/emotion-theming-10.0.14.tgz#e548d388493d07bedbb0d9d3bbe221766174b1f4"
-  integrity sha512-zMGhPSYz48AAR6DYjQVaZHeO42cYKPq4VyB1XjxzgR62/NmO99679fx8qDDB1QZVYGkRWZtsOe+zJE/e30XdbA==
-  dependencies:
-    "@babel/runtime" "^7.4.3"
-    "@emotion/weak-memoize" "0.2.3"
-    hoist-non-react-statics "^3.3.0"
-
 encodeurl@~1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/encodeurl/-/encodeurl-1.0.2.tgz#ad3ff4c86ec2d029322f5a02c3a9a606c95b3f59"
@@ -6148,10 +6126,10 @@ gatsby-plugin-compile-es6-packages@^2.0.0:
     "@babel/runtime" "^7.0.0"
     regex-escape "^3.4.8"
 
-gatsby-plugin-emotion@^4.1.0:
-  version "4.1.0"
-  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.1.0.tgz#475ec6eee3beab6be989d7e96c1d145ca3c9da7f"
-  integrity sha512-6Wrw47MK7j2OLgdjUmJVgdMtykFT9PNan2UTAjIWqquNMJgWWa96iM5kS4DnExhlwfyb50vji/SaWjW8JrUI8w==
+gatsby-plugin-emotion@^4.1.2:
+  version "4.1.2"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-emotion/-/gatsby-plugin-emotion-4.1.2.tgz#2ef3a303dea712efda85201501752ba126af2d03"
+  integrity sha512-CDOzfhiP0V6p5Z+wDSpVhpa4MpK0JFaIOlC1Ope8wg6+/5upMXvQ2zrWqYhE7O1UeaHByjAWUA/af4M3OM3ICw==
   dependencies:
     "@babel/runtime" "^7.0.0"
     "@emotion/babel-preset-css-prop" "^10.0.5"
@@ -6243,6 +6221,11 @@ gatsby-plugin-redirects@^1.0.0:
   integrity sha512-FB3pIqAfE4sD86DKndHuildhJaNJllzu2n1yJYjRpSImv8Ln1f7JH/HWoxYbNMj1n/r+Ktu8zh0TsulyaqvyOg==
   dependencies:
     gatsby-plugin-meta-redirect "^1.1.1"
+
+gatsby-plugin-theme-ui@^0.2.18:
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-theme-ui/-/gatsby-plugin-theme-ui-0.2.18.tgz#0fc30f6140f006389be1a72b1734362f5df08f79"
+  integrity sha512-BJp6oCdkyjNbqBBpGenvkbfWrLgL+tnUEVvY+2x72/FBzYTr7OBUSv6VFlIYTSTGJZxDJN8JOG0JdubMbbGPpw==
 
 gatsby-react-router-scroll@^2.1.3:
   version "2.1.3"
@@ -13025,13 +13008,13 @@ text-table@0.2.0, text-table@^0.2.0:
   resolved "https://registry.yarnpkg.com/text-table/-/text-table-0.2.0.tgz#7f5ee823ae805207c00af2df4a84ec3fcfa570b4"
   integrity sha1-f17oI66AUgfACvLfSoTsP8+lcLQ=
 
-theme-ui@^0.2.2:
-  version "0.2.2"
-  resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.2.2.tgz#b211ab0e565b8e74c843bc5c18b30d848ad13b15"
-  integrity sha512-ce29BzEP2pSogQ5XxtEUDXcwdtcb1SdPgJCZdFi7sfglA2vdADY6CdRXxZ6cVrdeVaDQQMtSaIbFghpplZbGMg==
+theme-ui@^0.2.18:
+  version "0.2.18"
+  resolved "https://registry.yarnpkg.com/theme-ui/-/theme-ui-0.2.18.tgz#2389c3b020aea6a86409469ac3887749d32a5cd3"
+  integrity sha512-RTtiVI8DKavChIVojwXcgcjiSBq3As4vlqyP5Uv8I3f5GkFtjL6lmSeHXJX0pOWElQcuu2NXhCOQAhmGXL+tVA==
   dependencies:
     "@emotion/is-prop-valid" "^0.8.1"
-    "@styled-system/css" "^5.0.5"
+    "@styled-system/css" "^5.0.16"
     deepmerge "^3.2.0"
     react "^16.8.0"
 

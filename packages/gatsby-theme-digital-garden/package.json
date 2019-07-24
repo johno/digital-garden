@@ -24,24 +24,22 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.14",
-    "@emotion/styled": "^10.0.14",
     "@mdx-js/mdx": "^1.0.21",
-    "@mdx-js/react": "^1.0.21",
-    "emotion-theming": "^10.0.14",
-    "gatsby-plugin-compile-es6-packages": "^2.0.0",
-    "gatsby-plugin-emotion": "^4.1.0",
+    "@mdx-js/react": "^1.0.27",
+    "gatsby-plugin-emotion": "^4.1.2",
     "gatsby-plugin-mdx": "rc",
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-og-image": "0.0.1",
     "gatsby-plugin-page-creator": "^2.1.2",
     "gatsby-plugin-react-helmet": "^3.1.0",
     "gatsby-plugin-redirects": "^1.0.0",
+    "gatsby-plugin-theme-ui": "^0.2.18",
     "gatsby-source-filesystem": "^2.1.2",
     "is-present": "^1.0.0",
     "path": "^0.12.7",
     "react-feather": "^2.0.0",
     "react-helmet": "^6.0.0-beta",
-    "theme-ui": "^0.2.2"
+    "theme-ui": "^0.2.18"
   },
   "gitHead": "b57bef4bf325ed0008dfa49e7f7ef204bed97194"
 }

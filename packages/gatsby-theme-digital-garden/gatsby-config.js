@@ -4,7 +4,6 @@ module.exports = options => {
   const { mdx = true, mdxLayouts = {} } = options
 
   return {
-    __experimentalThemes: [],
     plugins: [
       mdx && {
         resolve: 'gatsby-plugin-mdx',
@@ -32,12 +31,7 @@ module.exports = options => {
       'gatsby-plugin-redirects',
       'gatsby-plugin-og-image',
       'gatsby-plugin-emotion',
-      {
-        resolve: 'gatsby-plugin-compile-es6-packages',
-        options: {
-          modules: ['gatsby-theme-digital-garden', 'theme-ui']
-        }
-      }
+      'gatsby-plugin-theme-ui'
     ].filter(Boolean)
   }
 }
