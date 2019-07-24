@@ -1,7 +1,7 @@
 {
   "private": true,
   "name": "gatsby-starter-digital-garden-dark",
-  "version": "0.1.5",
+  "version": "0.2.0",
   "scripts": {
     "start": "yarn develop",
     "build": "gatsby build",
@@ -9,7 +9,7 @@
   },
   "dependencies": {
     "gatsby": "2.13.37",
-    "gatsby-theme-digital-garden": "^0.1.5",
+    "gatsby-theme-digital-garden": "^0.2.0",
     "react": "16.8.6",
     "react-dom": "16.8.6"
   }
