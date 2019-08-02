@@ -35,9 +35,7 @@ theme:
 ```js
 // gatsby-config.js
 module.exports = {
-  __experimentalThemes: [
-    'gatsby-theme-digital-garden'
-  ]
+  plugins: ['gatsby-theme-digital-garden']
 }
 ```
 
@@ -62,7 +60,7 @@ site
 
 ### Ordering your content
 
-__:warning: Not yet implemented__
+**:warning: Not yet implemented**
 
 Only the journal feature uses chronological order by default since it's meant
 to be a long running diary of ideas. The posts and wiki categories default
@@ -92,6 +90,7 @@ things on the horizon like:
 ## Built with
 
 - [MDX][]
+- [Theme UI][]
 - [Gatsby][]
 - [gatsby-theme-system][]
 
@@ -102,9 +101,8 @@ These following posts served as an inspiration to start this project.
 - https://joelhooks.com/digital-garden
 - https://stackingthebricks.com/how-blogs-broke-the-web/
 - https://tomcritchlow.com/2019/02/17/building-digital-garden/
+- https://anildash.com/2018/03/22/he-missing-building-blocks-of-the-web/ -https://www.inkandswitch.com/local-first.html
 
 [mdx]: https://mdxjs.com
-
 [gatsby]: https://gatsbyjs.org
-
-[gatsby-theme-system]: https://gatsby-themes.now.sh
+[theme-ui]: https://theme-ui.com

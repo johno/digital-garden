@@ -1,37 +1,15 @@
-const path = require('path')
-
 module.exports = options => {
-  const { mdx = true, mdxLayouts = {} } = options
+  const { contentPath = '/notes', basePath = '/notes' } = options
 
   return {
     plugins: [
-      mdx && {
-        resolve: 'gatsby-plugin-mdx',
-        options: {
-          extensions: [`.md`, `.mdx`],
-          defaultLayouts: {
-            default: require.resolve('./src/components/layout'),
-            ...mdxLayouts
-          }
-        }
-      },
       {
-        resolve: `gatsby-source-filesystem`,
+        resolve: 'gatsby-theme-notes',
         options: {
-          path: options.notes || `notes`,
-          name: `notes`
+          basePath,
+          contentPath
         }
-      },
-      {
-        resolve: `gatsby-plugin-page-creator`,
-        options: {
-          path: path.resolve(`pages`)
-        }
-      },
-      'gatsby-plugin-redirects',
-      'gatsby-plugin-og-image',
-      'gatsby-plugin-emotion',
-      'gatsby-plugin-theme-ui'
+      }
     ].filter(Boolean)
   }
 }

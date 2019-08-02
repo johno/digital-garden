@@ -1,0 +1,4 @@
+- Changed options
+- Deprecated gatsby-theme-digital-garden-blog
+- Deprecated gatsby-theme-digital-garden-portfolio
+- Using header.mdx for nav, no more links

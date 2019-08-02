@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: 'Digital Garden',
@@ -11,40 +13,8 @@ module.exports = {
     {
       resolve: 'gatsby-theme-digital-garden',
       options: {
-        header: {
-          home: {
-            href: '/',
-            label: 'Digital Garden'
-          },
-          links: [
-            {
-              href: '/writing',
-              label: 'Writing'
-            },
-            {
-              href: '/txt',
-              label: 'Notes'
-            },
-            {
-              href: '/contact',
-              label: 'Contact'
-            }
-          ]
-        },
-        notesPath: '/txt'
-      }
-    },
-    {
-      resolve: 'gatsby-theme-digital-garden-blog',
-      options: {
-        postsPath: '/writing'
-      }
-    },
-    {
-      resolve: 'gatsby-theme-digital-garden-portfolio',
-      options: {
-        projectsPath: '/work',
-        projects: 'projects'
+        basePath: '/txt',
+        contentPath: path.join(__dirname, 'notes')
       }
     }
   ]
