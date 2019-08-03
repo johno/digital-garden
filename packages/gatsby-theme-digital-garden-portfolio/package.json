@@ -17,15 +17,15 @@
     "react-dom": "16.8.6"
   },
   "peerDependencies": {
-    "gatsby": "^2.13.2",
+    "gatsby": "^2.13.50",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "dependencies": {
     "debug": "^4.1.1",
-    "gatsby-plugin-compile-es6-packages": "^2.0.0",
-    "gatsby-plugin-page-creator": "^2.1.2",
-    "gatsby-source-filesystem": "^2.1.2",
+    "gatsby-plugin-compile-es6-packages": "^2.1.0",
+    "gatsby-plugin-page-creator": "^2.1.5",
+    "gatsby-source-filesystem": "^2.1.8",
     "mkdirp": "^0.5.1"
   }
 }
