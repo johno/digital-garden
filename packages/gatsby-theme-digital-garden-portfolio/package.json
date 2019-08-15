@@ -12,7 +12,7 @@
     "react"
   ],
   "devDependencies": {
-    "gatsby": "2.13.63",
+    "gatsby": "2.13.64",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   },
