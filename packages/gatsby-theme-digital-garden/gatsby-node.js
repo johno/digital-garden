@@ -21,7 +21,7 @@ exports.createPages = async ({ graphql, actions }, pluginOptions) => {
 
   const result = await graphql(`
     {
-      mdxPages: allMdx {
+      mdxPages: allMdx(sort: { fields: fileAbsolutePath }) {
         edges {
           node {
             id
