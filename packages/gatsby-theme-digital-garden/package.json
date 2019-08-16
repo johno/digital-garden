@@ -1,7 +1,7 @@
 {
   "name": "gatsby-theme-digital-garden",
   "description": "Build your own digital garden with zero configuration",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "author": "John Otander",
   "license": "MIT",
   "main": "index.js",
