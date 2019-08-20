@@ -6615,10 +6615,10 @@ gatsby@2.13.50:
     xstate "^4.3.2"
     yaml-loader "^0.5.0"
 
-gatsby@2.13.69:
-  version "2.13.69"
-  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.69.tgz#0c66d7aeb531efe3c9c50223a7131a9143c6accc"
-  integrity sha512-m9rF2KB/GLu8bsEjC3gogLXGGsMMjgd4Lv9YaBkck1/Qv0y5AdPmZ0wKC4zMEi/IGhXCQ5O0JgPaGNolEGEhSw==
+gatsby@2.13.70:
+  version "2.13.70"
+  resolved "https://registry.yarnpkg.com/gatsby/-/gatsby-2.13.70.tgz#a0e9423993c2e2902b44d8d0df25267d1477f172"
+  integrity sha512-oaCB0RaYE5Tfi82BKRXjMRkYtCk1J3aljNYVWM86zSpmPnxENtiiSO7NRyTph/6q1Bxqj1QMoV3S9Pzp/Lk61w==
   dependencies:
     "@babel/code-frame" "^7.0.0"
     "@babel/core" "^7.0.0"
