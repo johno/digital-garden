@@ -5,15 +5,15 @@ import FileList from './file-list'
 import Breadcrumbs from './breadcrumbs'
 import Layout from './layout'
 import { SEO } from './seo'
-import useOptions from '../use-options'
+import getOptions from '../get-options'
 
 export default ({ directories, files, breadcrumbs = [] }) => {
   const breadcrumbsPath =
     breadcrumbs.length > 0
       ? ` | ${breadcrumbs.map(i => i.name).join(' | ')}`
       : ''
-  const notesTitle = useOptions().notesPath
-    ? `${useOptions().notesPath.slice(1)}${breadcrumbsPath}`
+  const notesTitle = getOptions().notesPath
+    ? `${getOptions().notesPath.slice(1)}${breadcrumbsPath}`
     : `Notes${breadcrumbsPath}`
   return (
     <Layout>

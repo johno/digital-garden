@@ -1,21 +1,21 @@
-import React from "react";
-import { Helmet } from "react-helmet";
-import UseSiteMetadata from "../use-site-metadata";
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import getSiteMetadata from '../get-site-metadata'
 
 const seoTitle = title =>
-  title ? `${title} | ${UseSiteMetadata().title}` : UseSiteMetadata().title;
+  title ? `${title} | ${getSiteMetadata().title}` : getSiteMetadata().title
 
 const metaDescription = (title, description) => {
   if (description) {
-    return description;
-  } else if (title && UseSiteMetadata().description) {
-    return `${title} | ${UseSiteMetadata().description}`;
-  } else if (UseSiteMetadata().description) {
-    return UseSiteMetadata().description;
+    return description
+  } else if (title && getSiteMetadata().description) {
+    return `${title} | ${getSiteMetadata().description}`
+  } else if (getSiteMetadata().description) {
+    return getSiteMetadata().description
   } else {
-    return seoTitle(title);
+    return seoTitle(title)
   }
-};
+}
 
 export const SEO = props => (
   <Helmet title={seoTitle(props.title)} defer={false}>
@@ -25,4 +25,4 @@ export const SEO = props => (
     />
     {/* TODO add more SEO fields here */}
   </Helmet>
-);
+)

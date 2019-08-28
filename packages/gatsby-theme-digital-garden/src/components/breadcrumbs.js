@@ -2,10 +2,10 @@ import React from 'react'
 import { Link } from 'gatsby'
 import { Styled, css } from 'theme-ui'
 
-import useOptions from '../use-options'
+import getOptions from '../get-options'
 
 export default ({ links }) => {
-  const { notesPath } = useOptions()
+  const { notesPath } = getOptions()
 
   return (
     <nav
