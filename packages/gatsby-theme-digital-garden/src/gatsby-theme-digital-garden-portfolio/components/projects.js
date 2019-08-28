@@ -5,14 +5,14 @@ import { Styled, css } from 'theme-ui'
 import Layout from '../../components/layout'
 import BackgroundImage from '../../components/background-image'
 import { SEO } from '../../components/seo'
-import useOptions from '../../use-options'
+import getOptions from '../../get-options'
 
 export default ({ projects }) => (
   <Layout>
     <SEO
       title={
-        useOptions().projectsPath
-          ? useOptions().projectsPath.slice(1)
+        getOptions().projectsPath
+          ? getOptions().projectsPath.slice(1)
           : 'Projects'
       }
     />

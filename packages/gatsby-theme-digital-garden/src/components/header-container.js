@@ -1,10 +1,10 @@
 import React from 'react'
 
 import Header from './header'
-import useOptions from '../use-options'
+import getOptions from '../get-options'
 
 export default () => {
-  const { header } = useOptions()
+  const { header } = getOptions()
   const { home, links } = header
 
   return <Header home={home} links={links} />

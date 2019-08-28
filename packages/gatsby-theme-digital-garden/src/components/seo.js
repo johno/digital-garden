@@ -1,17 +1,17 @@
 import React from 'react'
 import { Helmet } from 'react-helmet'
-import useSiteMetadata from '../use-site-metadata'
+import getSiteMetadata from '../get-site-metadata'
 
 const seoTitle = title =>
-  title ? `${title} | ${useSiteMetadata().title}` : useSiteMetadata().title
+  title ? `${title} | ${getSiteMetadata().title}` : getSiteMetadata().title
 
 const metaDescription = (title, description) => {
   if (description) {
     return description
-  } else if (title && useSiteMetadata().description) {
-    return `${title} | ${useSiteMetadata().description}`
-  } else if (useSiteMetadata().description) {
-    return useSiteMetadata().description
+  } else if (title && getSiteMetadata().description) {
+    return `${title} | ${getSiteMetadata().description}`
+  } else if (getSiteMetadata().description) {
+    return getSiteMetadata().description
   } else {
     return seoTitle(title)
   }
