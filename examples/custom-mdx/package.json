@@ -1,0 +1,25 @@
+{
+  "private": true,
+  "name": "gatsby-starter-digital-garden-custom-mdx",
+  "version": "0.2.3",
+  "scripts": {
+    "start": "yarn develop",
+    "build": "gatsby build",
+    "develop": "gatsby develop"
+  },
+  "dependencies": {
+    "gatsby": "2.13.50",
+    "gatsby-theme-digital-garden": "^0.2.3",
+    "gatsby-theme-digital-garden-blog": "^0.2.3",
+    "gatsby-theme-digital-garden-portfolio": "^0.2.3",
+    "react": "16.9.0",
+    "react-dom": "16.9.0",
+    "@mdx-js/mdx": "^1.1.5",
+    "@mdx-js/react": "^1.1.5",
+    "gatsby-plugin-mdx": "^1.0.22",
+    "rehype-autolink-headings": "^2.0.5",
+    "rehype-highlight": "^3.0.0",
+    "rehype-slug": "^2.0.3",
+    "rehype-toc": "^2.2.1"
+  }
+}
