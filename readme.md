@@ -35,8 +35,11 @@ theme:
 ```js
 // gatsby-config.js
 module.exports = {
-  __experimentalThemes: [
-    'gatsby-theme-digital-garden'
+  plugins: [
+    {
+      resolve: 'gatsby-theme-digital-garden',
+      options: {}
+    }
   ]
 }
 ```
