@@ -39,7 +39,7 @@
     "path": "^0.12.7",
     "react-feather": "^2.0.3",
     "react-helmet": "^6.0.0-beta",
-    "theme-ui": "^0.2.26"
+    "theme-ui": "^0.3.0"
   },
   "gitHead": "b57bef4bf325ed0008dfa49e7f7ef204bed97194"
 }
