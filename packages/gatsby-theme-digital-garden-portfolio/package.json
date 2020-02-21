@@ -26,6 +26,6 @@
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
     "gatsby-plugin-page-creator": "^2.1.5",
     "gatsby-source-filesystem": "^2.1.8",
-    "mkdirp": "^0.5.1"
+    "mkdirp": "^1.0.0"
   }
 }
