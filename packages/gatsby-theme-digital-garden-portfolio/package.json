@@ -13,8 +13,8 @@
   ],
   "devDependencies": {
     "gatsby": "2.15.8",
-    "react": "16.9.0",
-    "react-dom": "16.9.0"
+    "react": "16.13.1",
+    "react-dom": "16.13.1"
   },
   "peerDependencies": {
     "gatsby": "^2.13.50",
