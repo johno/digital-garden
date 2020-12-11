@@ -26,7 +26,7 @@
     "@emotion/core": "^10.0.15",
     "@mdx-js/mdx": "^1.1.5",
     "@mdx-js/react": "^1.1.5",
-    "gatsby-plugin-emotion": "^4.1.2",
+    "gatsby-plugin-emotion": "^5.0.0",
     "gatsby-plugin-mdx": "^1.0.22",
     "gatsby-plugin-meta-redirect": "^1.1.1",
     "gatsby-plugin-og-image": "0.0.1",
