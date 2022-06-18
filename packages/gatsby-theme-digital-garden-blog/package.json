@@ -14,13 +14,13 @@
   ],
   "devDependencies": {
     "gatsby": "2.15.8",
-    "react": "16.9.0",
-    "react-dom": "16.9.0"
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "peerDependencies": {
     "gatsby": "^2.13.50",
-    "react": "^16.9.0",
-    "react-dom": "^16.9.0"
+    "react": "^16.9.0 || ^18.0.0",
+    "react-dom": "^16.9.0 || ^18.0.0"
   },
   "dependencies": {
     "@mdx-js/mdx": "^1.1.5",
