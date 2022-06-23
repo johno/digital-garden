@@ -12,20 +12,20 @@
     "react"
   ],
   "devDependencies": {
-    "gatsby": "2.15.8",
+    "gatsby": "4.17.0",
     "react": "16.9.0",
     "react-dom": "16.9.0"
   },
   "peerDependencies": {
-    "gatsby": "^2.13.50",
+    "gatsby": "^2.13.50 || ^4.0.0",
     "react": "^16.9.0",
     "react-dom": "^16.9.0"
   },
   "dependencies": {
     "debug": "^4.1.1",
     "gatsby-plugin-compile-es6-packages": "^2.1.0",
-    "gatsby-plugin-page-creator": "^2.1.5",
-    "gatsby-source-filesystem": "^2.1.8",
+    "gatsby-plugin-page-creator": "^4.0.0",
+    "gatsby-source-filesystem": "^4.0.0",
     "mkdirp": "^0.5.1"
   }
 }
